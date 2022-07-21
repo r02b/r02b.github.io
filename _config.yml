@@ -2,8 +2,8 @@
 name: "***"
 title: "Noga H. Rotman's Code Blog"
 description: "Musings of a CS PhD student."
-logo: 'assets/images/logo.png'
-favicon: 'assets/images/logo.png'
+logo: 'assets/images/favicon-32x32.png'
+favicon: 'assets/images/favicon-32x32.png'
 baseurl: ''
 google_analytics: ''
 disqus: ''
