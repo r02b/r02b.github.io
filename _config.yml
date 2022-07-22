@@ -1,6 +1,6 @@
 # Site
-name: "***"
-title: "Noga H. Rotman's Code Blog"
+name: "*"
+title: "Noga H. Rotman's Coding Blog"
 description: "Musings of a CS PhD student."
 logo: 'assets/images/favicon-32x32.png'
 favicon: 'assets/images/favicon-32x32.png'
@@ -44,8 +44,8 @@ kramdown:
 
 # Adsense (change to "enabled" to activate, also your client id and ad slot. Create a new ad unit from your Adsense account to get the slot.)
 adsense: "disabled"
-adsense-data-ad-client: "ca-pub-3412143450191416"
-adsense-data-ad-slot: "1363087678"
+adsense-data-ad-client: ""
+adsense-data-ad-slot: ""
 
 # Lazy Images ("enabled" or "disabled")
 lazyimages: "disabled"
