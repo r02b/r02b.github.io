@@ -25,7 +25,7 @@ tips = sns.load_dataset("tips")
 This actually came to me while working on bar plots, so let's plot some bars!
 
 ```python
-ax = sns.barplot(x="day", y="total_bill", hue="sex", data=tips)
+barplot = sns.barplot(x="day", y="total_bill", hue="sex", data=tips)
 ```
 ![Tips bar plot]({{ site.baseurl }}/assets/images/df_1.png)
 
@@ -71,7 +71,7 @@ Simple, isn't it?
 ### Some more food for thought
 Let's plot the data and use the party size (the aptly named "size" column) as our categories:
 ```python
-ax = sns.barplot(x="size", y="total_bill", hue="sex", data=tips)
+barplot = sns.barplot(x="size", y="total_bill", hue="sex", data=tips)
 ```
 ![Tips bar plot with custom order]({{ site.baseurl }}/assets/images/df_3.png)
 
@@ -79,7 +79,7 @@ ax = sns.barplot(x="size", y="total_bill", hue="sex", data=tips)
 Here the data is in `int`, so the order is the natural order of int. What if we want to change the order to [1,3,6,2,4,6]? We could define that column to so it'd be a categorical column with the order we want, as we did above. But do we need to? In this case, not really, if we use Seaborn correctly:
 
 ```python
-ax = sns.barplot(x="size", y="total_bill", hue="sex", data=tips, order=[1,3,6,2,4,6])
+barplot = sns.barplot(x="size", y="total_bill", hue="sex", data=tips, order=[1,3,6,2,4,6])
 ```
 
 ![Tips bar plot with custom order]({{ site.baseurl }}/assets/images/df_4.png)
