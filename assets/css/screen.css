@@ -55,6 +55,10 @@ pre {
     transition: all 0.4s;
 }
 
+.text-dark {
+    color: #2A2A28!important;
+}
+
 section {
     margin-bottom: 20px;
 }
@@ -775,7 +779,7 @@ iframe {
         height: 350px;
         border-radius: 0;
         background-image: url(../images/wilder_1.jpg);
-        background-position-y: 770px;
+        background-position-y: 780px;
         background-size: cover;
     }
 
