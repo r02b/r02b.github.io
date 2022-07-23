@@ -12,12 +12,12 @@ License: https://www.wowthemes.net/freebies-license/
 }
 
 a {
-    color: #009999;
+    color: #007bff;
     transition: all 0.2s;
 }
 
 a:hover {
-    color: #03ADAC;
+    color: #2c8ef7;
     text-decoration: none;
 }
 
@@ -526,7 +526,7 @@ ul.tags li a:hover {
 
 .btn.follow {
     border-color: #02adad;
-    color: #009999;
+    color: #007bff;
     padding: 3px 10px;
     text-align: center;
     border-radius: 999em;
@@ -535,8 +535,8 @@ ul.tags li a:hover {
 }
 
 .btn.subscribe {
-    background-color: #009999;
-    border-color: #009999;
+    background-color: #007bff;
+    border-color: #007bff;
     color: rgba(255, 255, 255, 1);
     fill: rgba(255, 255, 255, 1);
     border-radius: 30px;
@@ -581,8 +581,8 @@ ul.tags li a:hover {
 }
 
 .alertbar input[type="submit"] {
-    background-color: #009999;
-    border: 1px solid #009999;
+    background-color: #007bff;
+    border: 1px solid #007bff;
     color: rgba(255, 255, 255, 1);
     fill: rgba(255, 255, 255, 1);
     font-size: 0.85rem;
