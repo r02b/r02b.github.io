@@ -17,14 +17,14 @@ a {
 }
 
 a:hover, a.text-dark:hover {
-    color: #6BA2DA!important;
+    color: #A2C4D6!important;
     text-decoration: none;
 }
 
 pre {
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-    border: #6BA2DA 1px solid;
+    border: #A2C4D6 1px solid;
     width: 100%;
     padding: 7px;
     font-family: monospace, sans-serif;

@@ -28,6 +28,30 @@ title: Home
 
 {% endif %}
 
+
+<!-- Explore
+================================================== -->
+<section class="explore">
+    <div class="section-title">
+        <h2><span>Explore</span></h2>
+    </div>
+    <div class="row">
+        <div class="col-auto mb-30px">
+            {% assign categories_list = site.categories %}
+            {% if categories_list.first[0] == null %}
+                {% for category in categories_list %}
+                    <a class="mt-1 mb-1" href="{{site.baseurl}}/categories#{{ category | url_escape | strip | replace: ' ', '-' }}">{{ category | camelcase }} ({{ site.tags[category].size }})</a>
+                {% endfor %}
+            {% else %}
+                {% for category in categories_list %}
+                    {{ category[0] | camelcase }} <a class="mt-1 mb-1" href="{{site.baseurl}}/categories#{{ category[0] | url_escape | strip | replace: ' ', '-' }}">({{ category[1].size }})</a>
+                {% endfor %}
+            {% endif %}
+            {% assign categories_list = nil %}
+	    </div>
+    </div>
+</section>
+
 <!-- Posts Index
 ================================================== -->
 <section class="recent-posts">
