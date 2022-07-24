@@ -43,11 +43,20 @@ title: Home
                     <a class="mt-1 mb-1" href="{{site.baseurl}}/categories#{{ category | url_escape | strip | replace: ' ', '-' }}">{{ category | camelcase }} ({{ site.tags[category].size }})</a>
                 {% endfor %}
             {% else %}
+                {% assign categories_size = site.categories | size %}
+                {% assign cat_num = 1 %}
                 {% for category in categories_list %}
-                    {{ category[0] | camelcase }} <a class="mt-1 mb-1" href="{{site.baseurl}}/categories#{{ category[0] | url_escape | strip | replace: ' ', '-' }}">({{ category[1].size }})</a>
+            <span class="text-capitalize">
+                    {{ category[0] | camelcase }} <a class="mt-1 mb-1 " href="{{site.baseurl}}/categories#{{ category[0] | url_escape | strip | replace: ' ', '-' }}">({{ category[1].size }})</a>
+                    {% if cat_num != categories_size %}
+                    ,
+                    {% endif %}
+             </span>
+                    {% assign cat_num = cat_num | plus:1 %}
                 {% endfor %}
             {% endif %}
             {% assign categories_list = nil %}
+             {% assign cat_num = nil %}
 	    </div>
     </div>
 </section>
