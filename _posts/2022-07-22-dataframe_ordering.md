@@ -7,12 +7,19 @@ image: assets/images/apple-1868383.jpg
 description: "About custom order in Pandas Dataframe, and a bit about Seaborn barplot."
 featured: true
 comments: false
+last_modified_at: 2022-07-24
+beforetoc: "1. Make sure you know the desired order for each DataFrame column. 
+
+2. If the default order does not match the desired one, implement using CategoricalDtype!"
+toc: false
 ---
 
 I have recently discovered that creating your own category order on a <a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html" target="_blank">DataFrame</a> column could be a very powerful tool. It certainly saved me some headaches. 
-There are of course tricks one can use in order to avoid this, e.g. creating a new column with explicit order (say a numerical value or a char), then using it when sorting, but for my personal taste, it's not as readble as I'd like it to be. Also, it gets complicated when you try to keep your DataFrame small for performance's sake.
-
-So, what else can we do?
+There are of course tricks one can use in order to avoid this, e.g. creating a new column with explicit order (say a numerical value or a char), then using it when sorting.
+However, as a general rule, I find that **writing down** and if need be **implementing** a specific **order** for every column in a DataFrame is the way to go. 
+For numbers, the default order is usually good, but not always. 
+For strings, the situation is even worse, as an alphabetical order could be completely uncorrelated with the data. 
+In fact, the data itself may, in some form or another, already reflect a very certain order. If the order does not seem important, it could still have repercussions on your plotting abilities (which I will address in later posts).
 
 Let's start by loading up some data using one of my favorite packages, <a href="https://seaborn.pydata.org/" target="_blank">Seaborn</a>.
 ```python
