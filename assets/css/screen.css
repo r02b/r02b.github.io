@@ -768,6 +768,10 @@ img {
     margin-right: auto;
 }
 
+img.emoji {
+    display: inline;
+}
+
 .bottompagination span.navigation {
     display: block;
     font-size: 0.93rem;
