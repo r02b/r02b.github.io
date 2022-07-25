@@ -3,6 +3,13 @@ Template Name: Mediumish
 Copyright: Sal, WowThemes.net, https://www.wowthemes.net 
 License: https://www.wowthemes.net/freebies-license/ 
 */
+
+
+:root {
+        --primary-color: #3A73AC;
+        --secondary-color: #A2C4D6 ;
+        }
+
 @media screen and (min-width:1900px) {
     html { font-size:18px; } /* Increase the font size on higher resolutions */
     .container {max-width:80%;}
@@ -12,19 +19,19 @@ License: https://www.wowthemes.net/freebies-license/
 }
 
 a {
-    color: #3A73AC;
+    color: var(--primary-color);
     transition: all 0.2s;
 }
 
 a:hover, a.text-dark:hover {
-    color: #A2C4D6!important;
+    color: var(--secondary-color)!important;
     text-decoration: none;
 }
 
 pre {
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-    border: #A2C4D6 1px solid;
+    border: var(--secondary-color) 1px solid;
     width: 100%;
     padding: 7px;
     font-family: monospace, sans-serif;
@@ -36,6 +43,10 @@ pre {
     line-height: 1.6;
     color: #333;
     margin-bottom: -rem;
+}
+
+.badge-danger {
+    background-color: var(--primary-color)!important;
 }
 
 .mediumnavigation {
@@ -544,7 +555,7 @@ ul.tags li a:hover {
 
 .btn.follow {
     border-color: #02adad;
-    color: #3A73AC;
+    color: var(--primary-color);
     padding: 3px 10px;
     text-align: center;
     border-radius: 999em;
@@ -553,8 +564,8 @@ ul.tags li a:hover {
 }
 
 .btn.subscribe {
-    background-color: #3A73AC;
-    border-color: #3A73AC;
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
     color: rgba(255, 255, 255, 1);
     fill: rgba(255, 255, 255, 1);
     border-radius: 30px;
@@ -599,8 +610,8 @@ ul.tags li a:hover {
 }
 
 .alertbar input[type="submit"] {
-    background-color: #3A73AC;
-    border: 1px solid #3A73AC;
+    background-color: var(--primary-color);
+    border: 1px solid var(--primary-color);
     color: rgba(255, 255, 255, 1);
     fill: rgba(255, 255, 255, 1);
     font-size: 0.85rem;
@@ -717,9 +728,22 @@ h6 {
 .article-post h3,
 .article-post h4,
 .article-post h5,
-.article-post h6 {
+.article-post h6{
     font-weight: 700;
     margin-bottom: 1.5rem;
+}
+
+.tldr h3{
+    font-weight: 700;
+
+}
+
+.tldr{
+    margin-bottom: 1.5rem;
+}
+
+.summary {
+    margin-bottom: 0.5rem!important;
 }
 
 .article-post img.shadow {
