@@ -202,7 +202,6 @@ section.recent-posts {
     font-size: .8rem;
     display: flex;
     align-items: center;
-    margin-bottom: 15px;
 }
 
 .author-thumb {
@@ -898,6 +897,7 @@ iframe {
 .card .img-fluid {
     height: 230px;
     width: 100%;
+    object-fit: cover;
 }
 
 .sticky-top-80 {
