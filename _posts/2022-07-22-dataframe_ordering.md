@@ -3,11 +3,11 @@ layout: post
 title:  "Custom Order in Pandas DataFrames"
 categories: [ data science ]
 tags: [ dataframes, bar plot, seaborn]
-image: assets/images/apple-1868383.jpg
+image: assets/images/duck-3792154.jpg
 description: "About custom order in Pandas Dataframe, and a bit about Seaborn barplot."
 featured: true
 comments: false
-last_modified_at: 2022-07-24
+last_modified_at: 2022-07-26
 beforetoc: "1. Make sure you know the desired order for each DataFrame column. 
 
 2. If the default order does not match the desired one, implement using CategoricalDtype!"
