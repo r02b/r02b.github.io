@@ -92,10 +92,9 @@ title: Home
 
     <div class="row listrecent">
 
-        {% for post in paginator.posts %}
-
-        {% include postbox.html %}
-
+        {% assign posts = paginator.posts | sort: 'last_updated' %}
+        {% for post in posts %}
+          {% include postbox.html %}
         {% endfor %}
 
     </div>
