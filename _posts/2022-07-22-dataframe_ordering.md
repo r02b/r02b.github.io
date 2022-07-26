@@ -57,7 +57,7 @@ Name: day, Length: 244, dtype: category
 Categories (4, object): ['Thur', 'Fri', 'Sat', 'Sun']
 ```
 
-The data is categorical, which is something we can easily change! How you ask?
+The data is categorical, for which we can easily change the order! How you ask?
 
 ### Meet `CategoricalDtype`
 Assume we want to change the order so that Sunday is actually the first day from the left. All we need to do is define a new custom order, and apply it to the appropriate DataFrame column:
