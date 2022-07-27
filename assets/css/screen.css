@@ -184,6 +184,10 @@ section.recent-posts {
     font-weight: 400;
 }
 
+.card-text p {
+    margin-bottom: 0px;
+}
+
 .featured-box-img-cover {
     object-fit: cover;
     width: 100%;

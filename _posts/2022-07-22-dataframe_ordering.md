@@ -7,14 +7,14 @@ image: assets/images/duck-3792154.jpg
 description: "About custom order in Pandas Dataframe, and a bit about Seaborn barplot."
 featured: true
 comments: false
-last_modified_at: 2022-07-26
+last_modified_at: 2022-07-27
 beforetoc: "1. Make sure you know the desired order for each DataFrame column. 
 
 2. If the default order does not match the desired one, implement using CategoricalDtype!"
 toc: false
 ---
 
-I have recently discovered that creating your own category order on a <a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html" target="_blank">DataFrame</a> column could be a very powerful tool. It certainly saved me some headaches. 
+I have recently discovered that creating your own category order on a Pandas DataFrame column could be a very powerful tool. It certainly saved me some headaches. 
 There are of course tricks one can use in order to avoid this, e.g. creating a new column with explicit order (say a numerical value or a char), then using it when sorting.
 However, as a general rule, I find that **writing down** and if need be **implementing** a specific **order** for every column in a DataFrame is the way to go. 
 For numbers, the default order is usually good, but not always. 
