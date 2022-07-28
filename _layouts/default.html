@@ -16,7 +16,13 @@
 
 <link href="{{ site.baseurl }}/assets/css/main.css" rel="stylesheet">
 
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+
 <script src="{{ site.baseurl }}/assets/js/jquery.min.js"></script>
+
+<script type="module" src="http://unpkg.com/cross-fetch/dist/cross-fetch.js"></script>
+
+<script type="module" src="{{ site.baseurl }}/assets/js/countapi-js.js"></script>
 
 </head>
 
@@ -31,6 +37,9 @@ ga('create', '{{site.google_analytics}}', 'auto');
 ga('send', 'pageview');
 </script>
 {% endif %}
+<!--<script>-->
+<!--countapi = require("{{ site.baseurl }}/assets/js/countapi-js.js");-->
+<!--</script>-->
 
 {% capture layout %}{% if page.layout %}layout-{{ page.layout }}{% endif %}{% endcapture %}
 <body class="{{layout}}">

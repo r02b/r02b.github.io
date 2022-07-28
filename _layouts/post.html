@@ -44,10 +44,24 @@ post_class: post-template
                 <!-- Post Date -->
                 <p>
                     <small>
-                        <span class="post-date"><time class="post-date" datetime="{{ page.date | date:"%Y-%m-%d" }}">{{ page.date | date: "%b %-d, %Y" }}</time></span>
-                        {% if page.last_modified_at %}
-                        (Updated: <time datetime="{{ page.last_modified_at | date_to_xmlschema }}" itemprop="dateModified">{{ page.last_modified_at | date: "%b %-d, %Y" }}</time>)
-                        {% endif %}
+                        <span class="post-date">
+                            <i class="fa fa-calendar" aria-hidden="true"></i>
+                            <time class="post-date" datetime="{{ page.date | date:"%Y-%m-%d" }}">{{ page.date | date: "%b %-d, %Y" }}</time>
+                            {% if page.last_modified_at %}
+                                (
+                            <i class="fa fa-calendar-plus" aria-hidden="true"></i>
+                            <time datetime="{{ page.last_modified_at | date_to_xmlschema }}" itemprop="dateModified">{{ page.last_modified_at | date: "%b %-d, %Y" }}</time>
+                            ),
+                            {% endif %}
+
+                            <script type="module">
+                                import countapi from "{{ site.baseurl }}/assets/js/countapi-js.js";
+                                countapi.visits('{{ page.url | replace:'/','' }}').then((result) => {
+                                    document.getElementById('visits').innerHTML = result.value
+                                });
+                            </script>
+                            <i class="fa fa-eye" aria-hidden="true">&nbsp;</i><span id="visits">...</span>
+                        </span>
                     </small>
                 </p>
 
@@ -104,7 +118,7 @@ post_class: post-template
             </div>
             {% endif %}
 
-            <!-- Post TLDR -->
+            <!-- Post TLDR - totally abusing the beforetoc attribute, but what the heck -->
             {% if page.beforetoc and page.toc == false %}
             <div class="toc mt-4 mb-4 lead tldr" id="tldr">
                 <i>
