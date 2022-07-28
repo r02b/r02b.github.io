@@ -51,9 +51,9 @@ post_class: post-template
                                 (
                             <i class="fa fa-calendar-plus" aria-hidden="true"></i>
                             <time datetime="{{ page.last_modified_at | date_to_xmlschema }}" itemprop="dateModified">{{ page.last_modified_at | date: "%b %-d, %Y" }}</time>
-                            ),
+                            ) |
                             {% else %}
-                            ,
+                            |
                             {% endif %}
 
                             <script type="module">
@@ -63,6 +63,14 @@ post_class: post-template
                                 });
                             </script>
                             <i class="fa fa-eye" aria-hidden="true">&nbsp;</i><span id="visits">...</span>
+                        </span>
+                        <!-- Post TLDR -->
+                        {% if page.beforetoc and page.toc == false %}
+                        <span class="post-date">|
+                            <i>
+                                <a href="#tldr"><span class="font-weight-bold">TL;DR</span></a>
+                            </i>
+                        {% endif %}
                         </span>
                     </small>
                 </p>
@@ -86,16 +94,6 @@ post_class: post-template
 
             {% endif %}
             <!-- End Featured Image -->
-
-            <!-- Post TLDR -->
-            {% if page.beforetoc and page.toc == false %}
-            <div class="toc mt-4 mb-4 lead">
-                <i>
-                <span class="font-weight-bold">TL;DR:</span>
-                here's the <a href="#tldr">jist!</a>
-                </i>
-            </div>
-            {% endif %}
 
             <!-- Post Content -->
             <div class="article-post">
