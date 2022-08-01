@@ -39,43 +39,53 @@ permalink: /blog
     <div class="row">
         <div class="col-6 mb-30px">
             <h5>Categories</h5>
+             <ul class="tags mb-4">
             {% assign categories_list = site.categories %}
+
             {% if categories_list.first[0] == null %}
+
                 {% for category in categories_list %}
-                    <a class="mt-1 mb-1" href="{{site.baseurl}}/categories#{{ category | url_escape | strip | replace: ' ', '-' }}">{{ category | camelcase }} ({{ site.tags[category].size }})</a>
+<!--                    <a class="mt-1 mb-1" href="{{site.baseurl}}/categories#{{ category | url_escape | strip | replace: ' ', '-' }}">{{ category | camelcase }} ({{ site.tags[category].size }})</a>-->
+                    <li>
+                        <a class="smoothscroll mt-1 mb-1" href="{{site.baseurl}}/categories#{{ category | url_escape | strip | replace: ' ', '-' }}">{{ category | camelcase }} ({{ site.tags[category].size }})</a>
+                    </li>
+<!--                    <a class="smoothscroll" href="{{site.baseurl}}/categories#{{ category | replace: " ","-" }}">{{ category }}</a>-->
                 {% endfor %}
             {% else %}
 <!--            <span class="text-capitalize">Categories:</span>-->
                 {% assign categories_size = site.categories | size %}
                 {% assign cat_num = 1 %}
                 {% for category in categories_list %}
-            <span class="text-capitalize">
-                    {{ category[0] | camelcase }} <a class="mt-1 mb-1 " href="{{site.baseurl}}/categories#{{ category[0] | url_escape | strip | replace: ' ', '-' }}">({{ category[1].size }})</a>
-                    {% if cat_num != categories_size %}
-                    ,
-                    {% endif %}
-             </span>
+            <li>
+                    <a class="mt-1 mb-1 " href="{{site.baseurl}}/categories#{{ category[0] | url_escape | strip | replace: ' ', '-' }}">{{ category[0] | camelcase }} ({{ category[1].size }})</a>
+<!--                    {% if cat_num != categories_size %}-->
+<!--                    ,-->
+<!--                    {% endif %}-->
+             </li>
                     {% assign cat_num = cat_num | plus:1 %}
                 {% endfor %}
             {% endif %}
+          </ul>
             {% assign categories_list = nil %}
              {% assign cat_num = nil %}
 	    </div>
         <div class="col-6 mb-30px">
              <h5>Tags</h5>
-            <span class="text-capitalize">
+            <ul class="tags mb-4">
                 {% assign tags_size = site.tags | size %}
                 {% assign tag_num = 1 %}
                 {% for tag in site.tags %}
-                    {{ tag[0] | camelcase }} <a class="mt-1 mb-1 " href="{{site.baseurl}}/tags#{{ tag[0] | url_escape | strip | replace: ' ', '-' }}">({{ tag[1].size }})</a>
-                    {% if tag_num != tags_size %}
-                        ,
-                    {% endif %}
-                    {% assign tag_num = tag_num | plus:1 %}
+                <li>
+                    <a class="mt-1 mb-1 " href="{{site.baseurl}}/tags#{{ tag[0] | url_escape | strip | replace: ' ', '-' }}">{{ tag[0] | camelcase }} ({{ tag[1].size }})</a>
+<!--                    {% if tag_num != tags_size %}-->
+<!--                        ,-->
+<!--                    {% endif %}-->
+<!--                    {% assign tag_num = tag_num | plus:1 %}-->
+                </li>
 
                 {% endfor %}
                 {% assign tag_num = nil %}
-            </span>
+            </ul>
         </div>
 
     </div>
