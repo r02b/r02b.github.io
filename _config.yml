@@ -28,9 +28,10 @@ jekyll-archives:
   permalinks:
     category: '/category/:name/'
     
-# Pagination 
-paginate: 6
-paginate_path: /page:num/
+# Pagination -not working in Github!
+#paginate: 6
+#paginate_path: "/blog/page:num/"
+##"/blog/page:num/"
     
 # Other
 markdown: kramdown

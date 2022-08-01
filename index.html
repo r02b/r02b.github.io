@@ -93,20 +93,26 @@ permalink: /blog
 
     <div class="row listrecent">
 
-        {% assign posts = paginator.posts | sort: 'last_updated' %}
-        {% for post in posts %}
-          {% include postbox.html %}
+        {% for post in site.posts %}
+        <script>
+            console.log("{{ post.title }}");
+        </script>
+
+        {% include postbox.html %}
+
         {% endfor %}
 
     </div>
 
 </section>
 
-<!-- Pagination
-================================================== -->
-<div class="bottompagination">
-<div class="pointerup"><i class="fa fa-caret-up"></i></div>
-<span class="navigation" role="navigation">
-    {% include pagination.html %}
-</span>
-</div>
+<!-- Not working on GitHub - need to write a workaround
+-->
+<!--&lt;!&ndash; Pagination-->
+<!--================================================== &ndash;&gt;-->
+<!--<div class="bottompagination">-->
+<!--<div class="pointerup"><i class="fa fa-caret-up"></i></div>-->
+<!--<span class="navigation" role="navigation">-->
+<!--    {% include pagination.html %}-->
+<!--</span>-->
+<!--</div>-->
