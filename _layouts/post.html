@@ -49,7 +49,7 @@ post_class: post-template
                             <time class="post-date" datetime="{{ page.date | date:"%Y-%m-%d" }}">{{ page.date | date: "%b %-d, %Y" }}</time>
                             {% if page.last_modified_at %}
                                 (
-                            <i class="fa fa-calendar-plus" aria-hidden="true"></i>
+                            <i class="far fa-calendar-plus" aria-hidden="true"></i>
                             <time datetime="{{ page.last_modified_at | date_to_xmlschema }}" itemprop="dateModified">{{ page.last_modified_at | date: "%b %-d, %Y" }}</time>
                             ) |
                             {% else %}

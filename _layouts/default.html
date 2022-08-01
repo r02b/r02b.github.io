@@ -16,7 +16,9 @@
 
 <link href="{{ site.baseurl }}/assets/css/main.css" rel="stylesheet">
 
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+<!--<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">-->
+<!--<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">-->
+
 
 <script src="{{ site.baseurl }}/assets/js/jquery.min.js"></script>
 
@@ -37,16 +39,16 @@ ga('create', '{{site.google_analytics}}', 'auto');
 ga('send', 'pageview');
 </script>
 {% endif %}
-<!--<script>-->
-<!--countapi = require("{{ site.baseurl }}/assets/js/countapi-js.js");-->
-<!--</script>-->
 
 {% capture layout %}{% if page.layout %}layout-{{ page.layout }}{% endif %}{% endcapture %}
 <body class="{{layout}}">
 	<!-- defer loading of font and font awesome -->
 	<noscript id="deferred-styles">
 		<link href="https://fonts.googleapis.com/css?family=Righteous%7CMerriweather:300,300i,400,400i,700,700i" rel="stylesheet">
-		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+<!--		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">-->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+
 	</noscript>
 
 
@@ -61,33 +63,55 @@ ga('send', 'pageview');
 <!--    <img src="{{ site.baseurl }}/{{ site.logo }}" alt="{{ site.name }}">-->
 <!--    </a>-->
     <!-- End Logo -->
+        <div class="">
+            <a class="navbar-brand" href="{{ site.baseurl }}/">Noga H. Rotman</a>
+<!--            <span style="nav-link"></span>-->
+<!--            <a class="navbar-brand" href="https://scholar.google.com/citations?user=VAgdtpoAAAAJ" target="_blank">-->
+<!--                <i class="ai ai-google-scholar-square fab zoom"></i></a>-->
+        </div>
+
 
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMediumish" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
+        <span class="navbar-toggler-icon"></span>
     </button>
 
     <div class="collapse navbar-collapse" id="navbarMediumish">
 
         <!-- Begin Menu -->
-
             <ul class="navbar-nav ml-auto">
-
+                <li class="nav-item">
+                    <a class="nav-olink" href="https://scholar.google.com/citations?user=VAgdtpoAAAAJ" target="_blank">
+                        <i class="ai ai-google-scholar-square fab zoom"></i></a>
+                </li>
+                <li class="nav-item">
+                    <span class="nav-sep">|</i></span>
+                </li>
                 {% if page.url == "/" %}
                 <li class="nav-item active">
                 {% else %}
                 <li class="nav-item">
                 {% endif %}
-                <a class="nav-link" href="{{ site.baseurl }}/index.html">Blog</a>
+                    <a class="nav-link" href="{{ site.baseurl }}/"><i class="fa-solid fa-house-chimney"></i></a>
                 </li>
-
+                {% if page.url == "/blog" %}
+                <li class="nav-item active">
+                {% else %}
                 <li class="nav-item">
-                <a class="nav-link" href="{{ site.baseurl }}/about">About</a>
+                {% endif %}
+                    <a class="nav-link" href="{{ site.baseurl }}/blog.html"><i class="fa-solid fa-blog"></i></a>
                 </li>
-
-
-                {% include search-lunr.html %}
-
+                {% if page.url == "/about" %}
+                <li class="nav-item active">
+                {% else %}
+                <li class="nav-item">
+                {% endif %}
+                    <a class="nav-link" href="{{ site.baseurl }}/about"><i class="fa-solid fa-circle-question"></i></a>
+                </li>
+                <li class="nav-item">
+                    <span class="nav-sep">|</i></span>
+                </li>
             </ul>
+            {% include search-lunr.html %}
 
         <!-- End Menu -->
 
@@ -105,16 +129,40 @@ ga('send', 'pageview');
 <!-- Site Title
 ================================================== -->
 <div class="mainheading">
-    <h1 class="sitetitle">{{ site.name }}</h1>
+<!--    <h1 class="sitetitle">{{ site.name }}</h1>-->
+
+    {% if page.url == "/blog" %}
     <p class="lead">
         {{ site.description }}
     </p>
+    {% endif %}
 </div>
 
 <!-- Content
 ================================================== -->
 <div class="main-content">
+    {% if page.url == "/" %}
+        <div class="row">
+            <div class="col-md-9 article-post">
+                {{content}}
+            </div>
+            <div class="col-md-3 align-right">
+                <div class="section-text" id="updates">
+                    <div class="section-title">
+                        <h2><span>Updates</span></h2>
+                    </div>
+                <ul><!-- Yes this is hard coded and very ugly, hopefully I'll automate at some point -->
+                    <li>Jul 27, 2022: new <a href="{{ site.baseurl }}/bars_1"> blog post</a></li>
+                    <li>Jul 22, 2022: <a href="{{ site.baseurl }}/dataframe_ordering"> first blog post</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    {% else %}
+
     {{ content }}
+
+    {% endif %}
 </div>
 
 {% if site.mailchimp-list %}

@@ -24,8 +24,13 @@ a {
 }
 
 a:hover, a.text-dark:hover {
-    color: var(--secondary-color)!important;
+    color: var(--secondary-color);
     text-decoration: none;
+}
+
+.navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover,
+.navbar-light .navbar-nav .nav-olink:hover {
+    color: var(--primary-color);
 }
 
 pre {
@@ -89,8 +94,12 @@ section.recent-posts {
 .section-title span {
     border-bottom: 1px solid rgba(0, 0, 0, .44);
     display: inline-block;
-    padding-bottom: 20px;
+    padding-bottom: 17px;
     margin-bottom: -1px;
+}
+
+.section-text {
+    margin-bottom: 3rem;
 }
 
 .article-post ol,
@@ -106,6 +115,13 @@ section.recent-posts {
 
 .post {
     height: 250px;
+}
+
+.align-right {
+    display: flex;
+    justify-content: flex-end;
+    margin-left: auto;
+    margin-right: 0;
 }
 
 .card-body {
@@ -127,10 +143,24 @@ section.recent-posts {
 }
 
 @media (min-width:992px) {
-    .navbar-expand-lg .navbar-nav .nav-link {
+    .navbar-expand-lg .navbar-nav .nav-link,
+    .navbar-expand-lg .navbar-nav .nav-sep,
+    .navbar-expand-lg .navbar-nav .nav-olink {
         padding-right: 0.8rem;
         padding-left: 0.8rem;
     }
+}
+
+.nav-sep, .nav-olink {
+    display: block;
+    padding: 0.5rem 1rem;
+}
+
+.nav-olink {
+    font-size: 1.25rem;
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+    color: rgba(0,0,0,.5);
 }
 
 .listfeaturedtag {
@@ -310,8 +340,11 @@ span.post-read-more a:hover {
     color: green;
 }
 
-.mediumnavigation .navbar-brand {
+
+.mediumnavigation .navbar-brand,
+.mediumnavigation .nav-olink {
     font-weight: 500;
+    font-family: Righteous;
 }
 
 .mediumnavigation .dropdown-menu {
@@ -502,6 +535,19 @@ blockquote {
     .post-top-meta.authorpage {
         text-align: center;
     }
+
+    #twitter-feed {
+        display: none;
+    }
+}
+
+
+.timeline-Header.timeline-InformationCircle-widgetParent {
+    padding-bottom: 13px;
+}
+
+.timeline-Header {
+    padding-bottom: 13px!important;
 }
 
 .share,
@@ -786,7 +832,7 @@ img.emoji {
 }
 
 .pointerup {
-    margin-bottom: -17px;
+    margin-bottom: -19px;
     margin-left: 49%;
     font-size: 30px;
 }
