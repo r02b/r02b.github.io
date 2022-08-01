@@ -48,10 +48,9 @@ post_class: post-template
                             <i class="far fa-calendar" aria-hidden="true"></i>
                             <time class="post-date" datetime="{{ page.date | date:"%Y-%m-%d" }}">{{ page.date | date: "%b %-d, %Y" }}</time>
                             {% if page.last_modified_at %}
-                                (
-                            <i class="far fa-calendar-plus" aria-hidden="true"></i>
+                                |&nbsp;<i class="far fa-calendar-plus" aria-hidden="true"></i>
                             <time datetime="{{ page.last_modified_at | date_to_xmlschema }}" itemprop="dateModified">{{ page.last_modified_at | date: "%b %-d, %Y" }}</time>
-                            ) |
+                             |
                             {% else %}
                             |
                             {% endif %}
@@ -100,7 +99,7 @@ post_class: post-template
                 <!-- Toc if any -->
                 {% if page.toc %}
                     {% if page.beforetoc %}
-                        <p><em>{{page.beforetoc}}</em></p>
+                        <em>{{ page.beforetoc | markdownify}}</em>
                     {% endif %}
                     <div class="toc mt-4 mb-4 lead">
                         <h3 class="font-weight-bold summary">Summary</h3>
@@ -122,7 +121,6 @@ post_class: post-template
             {% if page.beforetoc and page.toc == false %}
             <div class="toc mt-4 mb-4 lead tldr" id="tldr">
                 <i>
-<!--                <span class="font-weight-bold">TL;DR:</span>-->
                     <h3>TL;DR:</h3>
                 {{ page.beforetoc | markdownify }}
                 </i>
