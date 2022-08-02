@@ -197,11 +197,8 @@ section.recent-posts {
     padding: 0.5rem 1rem;
 }
 
-.nav-olink {
-    font-size: 1.25rem;
-    padding-top: 0.25rem;
-    padding-bottom: 0.25rem;
-    color: rgba(0,0,0,.5);
+.nav-link {
+    font-size: 1rem;
 }
 
 .listfeaturedtag {
@@ -1001,6 +998,30 @@ iframe {
     .share {
         margin-top: 30px;
     }
+}
+
+@media (max-width: 992px) {
+    #updates {
+        display: none;
+    }
+
+    .nav-sep {
+        display: none!important;
+    }
+
+    .bd-search {
+        display: none;
+    }
+    /*
+    .navbar-nav {
+        flex-direction: unset
+    }
+    */
+}
+
+form.bd-search {
+    margin-top: unset;
+    align-self: center;
 }
 
 .card .img-fluid {
