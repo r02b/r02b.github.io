@@ -39,7 +39,7 @@ permalink: /
 		</span>
 		<br>
 		<a href="https://dl.acm.org/doi/10.1145/3422604.3425940" target="_blank">[Short Paper]</a>,
-		<a href="content/slides/OSAP_Hotnets.pdf" target="_blank">[Slides]</a>,
+		<a href="assets/slides/OSAP_Hotnets.pdf" target="_blank">[Slides]</a>,
 		<a href="https://youtu.be/a3JO5p10MHE?t=5830" target="_blank">[Video]</a>
 		<br>Noga H. Rotman, Michael Schapira, Aviv Tamar.
 		<a href="http://conferences.sigcomm.org/hotnets/2020/" target="_blank">HotNets 2020</a>. Also see:
@@ -64,7 +64,7 @@ permalink: /
 		</span>
 		<br>
 		<a href="https://arxiv.org/abs/1810.03259v3" target="_blank">[Paper]</a>,
-		<a href="content/slides/Aurora_AIWeek.pdf" target="_blank">[Slides]</a>,
+		<a href="assets/slides/Aurora_AIWeek.pdf" target="_blank">[Slides]</a>,
 		<a href="https://youtu.be/8bzHuplGI-M" target="_blank">[Video]</a>
 		<br>Nathan Jay, Noga H. Rotman, P. Brighten Godfrey, Michael Schapira, Aviv Tamar.
 		<a href="https://icml.cc/" target="_blank">ICML 2019</a>. Also see:
