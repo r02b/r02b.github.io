@@ -57,7 +57,7 @@ permalink: /blog
                 {% assign cat_num = 1 %}
                 {% for category in categories_list %}
             <li>
-                    <a class="mt-1 mb-1 " href="{{site.baseurl}}/categories#{{ category[0] | url_escape | strip | replace: ' ', '-' }}">{{ category[0] | camelcase }} ({{ category[1].size }})</a>
+                    <a class="mt-1 mb-1 btn" href="{{site.baseurl}}/categories#{{ category[0] | url_escape | strip | replace: ' ', '-' }}">{{ category[0] | camelcase }} ({{ category[1].size }})</a>
 <!--                    {% if cat_num != categories_size %}-->
 <!--                    ,-->
 <!--                    {% endif %}-->
@@ -76,7 +76,7 @@ permalink: /blog
                 {% assign tag_num = 1 %}
                 {% for tag in site.tags %}
                 <li>
-                    <a class="mt-1 mb-1 " href="{{site.baseurl}}/tags#{{ tag[0] | url_escape | strip | replace: ' ', '-' }}">{{ tag[0] | camelcase }} ({{ tag[1].size }})</a>
+                    <a class="mt-1 mb-1 btn" href="{{site.baseurl}}/tags#{{ tag[0] | url_escape | strip | replace: ' ', '-' }}">{{ tag[0] | camelcase }} ({{ tag[1].size }})</a>
 <!--                    {% if tag_num != tags_size %}-->
 <!--                        ,-->
 <!--                    {% endif %}-->

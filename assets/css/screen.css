@@ -30,6 +30,7 @@ License: https://www.wowthemes.net/freebies-license/
 a {
     color: var(--primary-color);
     transition: all 0.2s;
+    text-decoration: none;
 }
 
 a:hover, a.text-dark:hover {
@@ -627,18 +628,6 @@ ul.tags li {
     font-size: 0.9rem;
 }
 
-ul.tags li a {
-    background: rgba(0, 0, 0, .05);
-    color: rgba(0, 0, 0, .6);
-    border-radius: 3px;
-    padding: 5px 10px;
-}
-
-ul.tags li a:hover {
-    background: rgba(0, 0, 0, .07);
-    text-decoration: none;
-}
-
 .margtop3rem {
     margin-top: 3rem;
 }
@@ -651,9 +640,14 @@ ul.tags li a:hover {
     margin-bottom: 1.2rem;
 }
 
-.btn.follow {
-    border-color: #02adad;
+.btn:hover {
     color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+a.btn, .btn.follow {
+    border-color: var(--light-grey);
+    color: var(--dark-grey);
     padding: 3px 10px;
     text-align: center;
     border-radius: 999em;
