@@ -29,6 +29,10 @@ permalink: /blog
 
 {% endif %}
 
+<script type="module">
+    import countapi from "{{ site.baseurl }}/assets/js/countapi-js.js";
+    countapi.visits('{{ page.url | replace:'/','' }}');
+</script>
 
 <!-- Explore
 ================================================== -->
