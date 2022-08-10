@@ -60,7 +60,6 @@ function validateTuple(namespace, key, value) {
 }
 
 function finalize(res) {
-    console.log(res)
     const valid_responses = [200, 400, 403, 404];
     if (valid_responses.includes(res.status)) {
         return res.json().then(function(json) {
@@ -129,17 +128,9 @@ function visits(page) {
 };
 
 function info_mine(page) {
-//    var stuff = 0;
     return validatePath('r02b.github.io', page).then(function(result) {
         return fetch(`${BASE_API_PATH}/info/${result.path}`).then(finalize);
     });
-//    try {
-////        stuff = fetch(`${BASE_API_PATH}/info/r02b.github.io/`+page).then(finalize);
-//        stuff = fetch(`${BASE_API_PATH}/info/r02b.github.io/`+page).then(finalize);
-//    } catch (error) {
-//        console.log(page + 'is not tracked');
-//    }
-//    return stuff;
 };
 
 export default { validatePath, validateTuple, get, set, update, hit, info, info_mine, create, stats, event, visits};
