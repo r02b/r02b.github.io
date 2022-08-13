@@ -315,11 +315,10 @@ section.recent-posts {
 
 .toc a, .toc li {
     text-decoration: none;
-    color: var(--light-grey);
 }
 
 .toc a:hover, .share a:hover {
-    color: var(--primary-color);
+    color: var(--light-grey)
 }
 
 .author-meta {
@@ -463,6 +462,16 @@ blockquote {
 .featured-image {
     display: block;
     margin-bottom: 1.5rem;
+}
+
+.row.image-text-row {
+    align-items: center;
+    justify-content: center;
+}
+
+.image-text-left {
+    height: 100%;
+    text-align: center;
 }
 
 .share {
