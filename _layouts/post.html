@@ -63,7 +63,7 @@ post_class: post-template
                             <i class="far fa-eye" aria-hidden="true"></i>&nbsp;<span id="visits">...</span>
                         </span>
                         <!-- Post TLDR -->
-                        {% if page.beforetoc and page.toc == false %}
+                        {% if page.tldr %}
                         <span class="post-date tldr">|
                             <i>
                                 <a href="#tldr"><span class="font-weight-bold">TL;DR</span></a>
@@ -115,11 +115,11 @@ post_class: post-template
             {% endif %}
 
             <!-- Post TLDR - totally abusing the beforetoc attribute, but what the heck -->
-            {% if page.beforetoc and page.toc == false %}
+            {% if page.tldr %}
             <div class="toc mt-4 mb-4 lead tldr" id="tldr">
                 <i>
                     <h3>TL;DR:</h3>
-                {{ page.beforetoc | markdownify }}
+                {{ page.tldr | markdownify }}
                 </i>
             </div>
             {% endif %}

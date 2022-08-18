@@ -28,8 +28,12 @@
                                 </div>
                                 {% endif %}
                             </h2>
-
+                            {% if post.toc and post.beforetoc %}
+                            <h4 class="card-text">{{ post.beforetoc | truncate: 170 }}</h4>
+                            {% else %}
                             <h4 class="card-text">{{ post.excerpt | truncate: 170 }}</h4>
+
+                            {% endif %}
                         </div>
                         <div class="card-footer b-0 bg-white mt-auto">
                             <div class="wrapfooter">
