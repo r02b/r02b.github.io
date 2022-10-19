@@ -4,6 +4,7 @@ title:  "Seaborn Color Palettes and How to Use Them"
 categories: [ data science, visualization ]
 tags: [ seaborn ]
 image: "assets/images/crayon-2162075.jpg"
+description: "Using Seaborn color palettes - a comprehensive list, usage examples and customization." 
 featured: true
 comments: false
 beforetoc: "I love how easy it is to make a visually pleasing plot with `seaborn` color palettes. I've compiled a list of available palettes based on data types, and added a few tips on how to use them."
