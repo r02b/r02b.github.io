@@ -1,6 +1,7 @@
 ---
 layout: default
-title: Hi!
+title: "Noga H. Rotman"
+description: "CS PhD Student"
 permalink: /
 ---
 <div id="hi" class="section-text">
