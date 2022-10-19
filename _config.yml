@@ -19,6 +19,12 @@ plugins:
   - jekyll-feed
   - jekyll-seo-tag
   - jekyll-archives
+
+# for the SEO plugin
+twitter:
+  username: NogaRot
+  card: summary
+url: nogahrotman.com
     
 # Archives
 jekyll-archives:
