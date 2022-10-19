@@ -3,7 +3,7 @@ layout: post
 title: "Custom Order in Pandas DataFrames"
 categories: [ data science ]
 tags: [ dataframes, bar plot, seaborn]
-image: assets/images/duck-3792154.jpg
+image: "assets/images/duck-3792154.jpg"
 description: "About custom order in Pandas Dataframe, and a bit about Seaborn barplot."
 featured: false
 comments: false
