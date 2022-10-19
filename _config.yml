@@ -24,7 +24,6 @@ plugins:
 twitter:
   username: NogaRot
   card: summary_large_image
-url: nogahrotman.com
     
 # Archives
 jekyll-archives:
