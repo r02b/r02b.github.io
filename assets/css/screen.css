@@ -87,6 +87,10 @@ pre {
     background-color: var(--primary-color)!important;
 }
 
+.badge-add-text{
+    font-family: 'Righteous'
+}
+
 .mediumnavigation {
     background: rgba(255, 255, 255, .97);
     box-shadow: 0 2px 2px -2px rgba(0, 0, 0, .15);
