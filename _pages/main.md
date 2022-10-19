@@ -1,7 +1,8 @@
 ---
 layout: default
 title: "Noga H. Rotman"
-description: "CS PhD Student"
+description: "CS PhD Student @ HUJI"
+image: "assets/images/graphic1.png"
 permalink: /
 ---
 <div id="hi" class="section-text">
