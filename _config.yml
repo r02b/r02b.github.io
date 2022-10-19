@@ -23,7 +23,7 @@ plugins:
 # for the SEO plugin
 twitter:
   username: NogaRot
-  card: summary
+  card: summary_large_image
 url: nogahrotman.com
     
 # Archives
