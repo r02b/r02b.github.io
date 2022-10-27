@@ -10,6 +10,8 @@ License: https://www.wowthemes.net/freebies-license/
         --secondary-color: #A2C4D6;
         --light-grey: rgba(0, 0, 0, .44);
         --dark-grey: rgba(0, 0, 0, .8);
+        --header-font: 'Righteous',  Roboto, sans-serif;
+        --secondary-font: 'Merriweather', "Segoe UI", "Helvetica Neue";
         }
 
 @media screen and (min-width:1900px) {
@@ -88,7 +90,7 @@ pre {
 }
 
 .badge-add-text{
-    font-family: 'Righteous'
+    font-family: var(--header-font)
 }
 
 .mediumnavigation {
@@ -132,15 +134,14 @@ section.recent-posts {
     border-bottom: 1px solid rgba(0, 0, 0, .125);
     margin-bottom: 25px;
     font-weight: 700;
-    font-size: 1.4rem;
-    margin-bottom: 27px;
-    font-family: Righteous;
+    font-size: 1.6rem;
+    margin-bottom: 20px;
 }
 
 .section-title span {
     border-bottom: 1px solid --var(--light-grey);
     display: inline-block;
-    padding-bottom: 17px;
+    padding-bottom: 10px;
     margin-bottom: -1px;
 }
 
@@ -151,6 +152,14 @@ section.recent-posts {
 .article-post ol,
 .article-post ul {
     margin-bottom: 1.5rem;
+}
+
+i.fa-li {
+    font-size: 1.4rem;
+}
+
+.fa-ul li:not(:last-child) {
+  padding-bottom: 1rem;
 }
 
 .article-post ol ol,
@@ -178,6 +187,14 @@ section.recent-posts {
     padding-right: 1.25rem;
     padding-left: 1.25rem;
     padding-bottom: 0;
+}
+
+.paper-name, .paper-links {
+    font-family: var(--header-font);
+}
+
+.paper-name {
+    font-size: 1.2rem;
 }
 
 @media (min-width:576px) {
@@ -257,8 +274,22 @@ section.recent-posts {
     font-weight: 400;
 }
 
+.card-title {
+    height: 50px;
+    vertical-align: bottom;
+    display: table-cell;
+}
+
 .card-text p {
-    margin-bottom: 0px;
+    margin-bottom: 0rem;
+}
+
+h1.card-text, h2.card-text, h3.card-text, h4.card-text, h5.card-text, h6.card-text {
+    font-family: var(--bs-font-sans-serif);
+}
+
+.card-text {
+    margin-top: 0.5rem;
 }
 
 .featured-box-img-cover {
@@ -311,6 +342,11 @@ section.recent-posts {
     margin-bottom: 5px;
     margin-top: 5px;
     font-size: 0.95rem;
+}
+
+.toc {
+    margin-bottom: 4rem!important;
+    margin-top: 3rem!important;
 }
 
 .toc ul {
@@ -395,7 +431,7 @@ span.post-read-more a:hover {
 .mediumnavigation .navbar-brand,
 .mediumnavigation .nav-olink {
     font-weight: 500;
-    font-family: Righteous;
+    font-family: var(--header-font);
 }
 
 .mediumnavigation .dropdown-menu {
@@ -421,7 +457,7 @@ span.post-read-more a:hover {
 }
 
 .mainheading h1.sitetitle {
-    font-family: Righteous;
+    font-family: var(--header-font);
 }
 
 .mainheading h1.posttitle {
@@ -446,8 +482,14 @@ span.post-read-more a:hover {
 }
 
 .article-post {
-    font-family: Merriweather;
+    font-family: var(--secondary-font);
     font-size: 1.1rem;
+    line-height: 1.84;
+    color: var(--dark-grey);
+}
+
+.section-text {
+    font-family: var(--secondary-font);
     line-height: 1.84;
     color: var(--dark-grey);
 }
@@ -573,7 +615,7 @@ blockquote {
 
     .listfeaturedtag .wrapfooter {
         position: relative;
-        margin-top: 30px;
+        margin-top: 10px;
     }
 
     .listfeaturedtag .card-block {
@@ -829,23 +871,34 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    /*font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;*/
+    font-family: var(--header-font)
 }
 
-.article-post .h1,
-.article-post .h2,
-.article-post .h3,
-.article-post .h4,
-.article-post .h5,
-.article-post .h6,
 .article-post h1,
 .article-post h2,
 .article-post h3,
 .article-post h4,
 .article-post h5,
-.article-post h6{
+.article-post h6 {
     font-weight: 700;
-    margin-bottom: 1.5rem;
+}
+
+.article-post h3,
+.article-post h4,
+.article-post h5,
+.article-post h6 {
+    font-family: var(--secondary-font)
+}
+
+.article-post h3 {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+}
+
+h3.font-weight-bold.summary {
+    font-family: var(--header-font);
+    font-size: 1.75rem
 }
 
 .tldr h3{
@@ -862,7 +915,7 @@ h6 {
 }
 
 .summary {
-    margin-bottom: 0.5rem!important;
+    /*margin-bottom: 0.5rem!important;*/
 }
 
 .article-post img.shadow {
