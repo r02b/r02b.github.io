@@ -9,6 +9,7 @@ featured: true
 comments: false
 beforetoc: "I love how easy it is to make a visually pleasing plot with `seaborn` color palettes. I've compiled a list of available palettes based on data types, and added a few tips on how to use them."
 toc: true
+last_modified_at: 2022-11-08
 ---
 
 
@@ -504,6 +505,21 @@ plt.tight_layout()
 
 And here is the resulting graph:
 ![seaborn plot with custom palette]({{ site.baseurl }}/assets/images/color_palettes/coolors_fig.png)
+
+
+### A bit about colorblind palettes
+A few months back a friend asked how to make a graph more grayscale friendly and colorblind friendly.
+The first thing that came to mind was using [hatches for bar plots]({% post_url 2022-07-27-bars_1 %}).
+Seaborn does have a colorblind palette (mentioned above), but I wondered if there's anything else I'll be able to use to adjust my own palettes.
+I am still looking for more resources on the topic, but in the meantime, I found a really cool free feature on [Coolors](https://coolors.co/){:target="blank"}, aptly named 'color blindness':
+
+![Custom color palette]({{ site.baseurl }}/assets/images/color_palettes/colorblindness_1.png)
+
+Clicking the button will reveal a list of types of colorblindness. Clicking each will allow you to have a hint of how color blind people will see your palette, and hopefully avoid pitfalls:
+
+![Custom color palette]({{ site.baseurl }}/assets/images/color_palettes/colorblindness_2.png)
+<br>
+
 
 
 ## Using Your Color Palette
