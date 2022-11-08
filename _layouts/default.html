@@ -13,16 +13,6 @@
     <link href="{{ site.baseurl }}/assets/css/screen.css" rel="stylesheet">
     <link href="{{ site.baseurl }}/assets/css/main.css" rel="stylesheet">
     <script src="{{ site.baseurl }}/assets/js/jquery.min.js"></script>
-
-
-<!--    <link href="{{ site.baseurl }}/assets/fontawesome-free-6.2.0-web/css/fontawesome.css" rel="stylesheet">-->
-<!--    <link href="{{ site.baseurl }}/assets/fontawesome-free-6.2.0-web/css/brands.css" rel="stylesheet">-->
-<!--    <link href="{{ site.baseurl }}/assets/fontawesome-free-6.2.0-web/css/all.css" rel="stylesheet">-->
-
-    <!--<script type="module" src="https://unpkg.com/cross-fetch/dist/cross-fetch.js"></script>-->
-
-<!--<script type="module" src="{{ site.baseurl }}/assets/js/countapi-js.js"></script>-->
-
 </head>
 
 {% if jekyll.environment == 'production' %}
@@ -42,33 +32,26 @@ ga('send', 'pageview');
 	<!-- defer loading of fonts -->
 	<noscript id="deferred-styles">
 		<link href="https://fonts.googleapis.com/css?family=Righteous%7CMerriweather:300,300i,400,400i,700,700i" rel="stylesheet">
-<!--		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">-->
-<!--		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">-->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/fontawesome.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/brands.css">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
-<!--        <link href="{{ site.baseurl }}/assets/fontawesome-free-6.2.0-web/css/fontawesome.css" rel="stylesheet">-->
-<!--        <link href="{{ site.baseurl }}/assets/fontawesome-free-6.2.0-web/css/brands.css" rel="stylesheet">-->
-<!--        <link href="{{ site.baseurl }}/assets/fontawesome-free-6.2.0-web/css/all.min.css" rel="stylesheet">-->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
 
 	</noscript>
 
-
     <!-- Begin Menu Navigation
     ================================================== -->
+    {% if page.url == "/" %}
     <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top mediumnavigation nav-down">
-
+    {% else %}
+    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top mediumnavigation nav-down img-bg">
+    {% endif %}
         <div class="container pr-0 container-small">
-
-        <!-- Begin Logo -->
-    <!--    <a class="navbar-brand" href="{{ site.baseurl }}/">-->
-    <!--    <img src="{{ site.baseurl }}/{{ site.logo }}" alt="{{ site.name }}">-->
-    <!--    </a>-->
-        <!-- End Logo -->
+            {% if page.url == "/" %}
             <div class="">
                 <a class="navbar-brand" href="{{ site.baseurl }}/">Noga H. Rotman</a>
             </div>
+            {% endif %}
 
 
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMediumish" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -81,11 +64,9 @@ ga('send', 'pageview');
             <ul class="navbar-nav ml-auto">
                 {% if page.url == "/" %}
                 <li class="nav-item active">
-                {% else %}
-                <li class="nav-item">
-                {% endif %}
-                    <a class="nav-link" href="{{ site.baseurl }}/"><i class="fa-solid fa-house-chimney"></i></a>
+                     <a class="nav-link" href="{{ site.baseurl }}/"><i class="fa-solid fa-house-chimney"></i></a>
                 </li>
+                {% endif %}
                 {% if page.url == "/blog" %}
                 <li class="nav-item active">
                 {% else %}
@@ -100,6 +81,7 @@ ga('send', 'pageview');
                 {% endif %}
                     <a class="nav-link" href="{{ site.baseurl }}/about"><i class="fa-solid fa-circle-question"></i></a>
                 </li>
+               {% if page.url == "/" %}
                 <li class="nav-item">
                     <span class="nav-sep">|</i></span>
                 </li>
@@ -113,6 +95,7 @@ ga('send', 'pageview');
                 <li class="nav-item">
                     <a class="nav-link" href="https://www.linkedin.com/in/noga-h-rotman/" target="_blank"><i class="fab fa-linkedin"></i></a>
                 </li>
+                {% endif %}
 
                 <li class="nav-item">
                     <span class="nav-sep">|</i></span>
@@ -131,20 +114,24 @@ ga('send', 'pageview');
     <!-- End Navigation
     ================================================== -->
 
+    <!-- Site Title
+    ================================================== -->
+    <div class="all-content">
     <div class="site-content">
+            {% if page.url == "/blog" %}
+        <div class="container container-small">
+            <div class="blog-header container container-small">
+                <div class="container">
+                     {{ site.description }}
+                </div>
+<!--                    <p class="lead">-->
+<!--                        {{ site.description }}-->
+<!--                    </p>-->
+            </div>
+        </div>
+     {% endif %}
 
         <div class="container container-small">
-
-            <!-- Site Title
-            ================================================== -->
-
-            <div class="mainheading">
-            {% if page.url == "/blog" %}
-                <p class="lead">
-                    {{ site.description }}
-                </p>
-            {% endif %}
-            </div>
 
 
             <!-- Content
@@ -223,13 +210,13 @@ ga('send', 'pageview');
 
     <!-- Begin Footer
     ================================================== -->
+    {% if page.url == "/" %}
     <footer class="footer">
-        <div class="container">
-            <div class="row">
-                <div class="text-center">
+    {% else %}
+    <footer class="footer img-bg">
+    {% endif %}
+        <div class="container text-center">
                     Copyright © {{ site.time | date: "%Y" }} Noga H. Rotman
-                </div>
-            </div>
         </div>
     </footer>
     <!-- End Footer
@@ -254,6 +241,6 @@ ga('send', 'pageview');
     <!--{% if page.layout == 'post' %}-->
     <!--<script id="dsq-count-scr" src="//{{site.disqus}}.disqus.com/count.js"></script>-->
     <!--{% endif %}-->
-
+</div>
 </body>
 </html>

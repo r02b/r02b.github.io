@@ -6,7 +6,7 @@ image: "assets/images/graphic1.png"
 permalink: /
 ---
 <div id="hi" class="section-text">
-     <div class="section-title">
+     <div class="section-title section-main">
         <h2><span>Hi!</span></h2>
     </div>
     <div>
@@ -32,7 +32,7 @@ permalink: /
     </div>
  </div>
  <div id="publications" class="section-text">
-     <div class="section-title">
+     <div class="section-title section-main">
         <h2><span>Publications</span></h2>
     </div>
     <ul class="fa-ul">
@@ -74,7 +74,7 @@ permalink: /
 </div>
 
 <div id="preprints" class="section-text">
-     <div class="section-title">
+     <div class="section-title section-main">
         <h2><span>Preprints</span></h2>
     </div>
     <ul class="fa-ul">
@@ -88,7 +88,7 @@ permalink: /
 	        </span>
 	     </li>
 	     <li><i class="fa-li fas fa-file-pen"> </i>
-	        <span class="paper-name">Pied piper: Rethinking Internet Data Delivery</span>
+	        <span class="paper-name">Pied Piper: Rethinking Internet Data Delivery</span>
 	        <br>Aran Bergman, Israel Cidon, Isaac Keslassy, Noga H. Rotman, Michael Schapira, Alex Markuze, Eyal Zohar. 2018.
 	        <br>
 	        <span class="paper-links">

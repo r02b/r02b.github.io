@@ -29,6 +29,17 @@ License: https://www.wowthemes.net/freebies-license/
     padding: 1rem 0rem;
 }
 
+
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
 a {
     color: var(--primary-color);
     transition: all 0.2s;
@@ -49,6 +60,20 @@ a.text-dark:hover {
     font-weight: bold;
 }
 
+.img-bg {
+    background-image: url('/assets/images/long.png')!important;
+}
+
+.colored-bg {
+    background-color: var(--secondary-color)!important;
+    color: white;
+}
+
+.img-bg .navbar-nav .nav-link {
+    color: white;
+}
+
+
 .navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover,
 .navbar-light .navbar-nav .nav-olink:hover {
     color: var(--primary-color);
@@ -67,7 +92,7 @@ a.text-dark:hover {
 pre {
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-    border: var(--secondary-color) 1px solid;
+    border: var(--light-grey) 1px solid;
     width: 100%;
     padding: 7px;
     font-family: monospace, sans-serif;
@@ -79,6 +104,53 @@ pre {
     line-height: 1.6;
     color: #333;
     margin-bottom: -rem;
+}
+
+/* Luner search */
+.lunrsearchresult .title {
+    color: var(--primary-color)!important;
+}
+
+div#lunrsearchresults {
+    width: 0px;
+}
+
+button.btn-danger {
+    background-color: var(--primary-color);
+    border-color: var(--secondary-color);
+}
+
+button.btn-danger:hover {
+     background-color: white;
+}
+
+button.close {
+     background-color: white;
+     display: inline-block;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    cursor: pointer;
+    border: 1px solid transparent;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    border-radius: 0.25rem;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+button.close:hover {
+     background-color: var(--primary-color);
+     color: white;
+}
+
+.btn {
+
+}
+[type=button], [type=reset], [type=submit], button {
+    -webkit-appearance: button;
 }
 
 .card-footer.b-0.bg-white.mt-auto, .card-footer.bg-white {
@@ -99,19 +171,25 @@ pre {
     transition: top 0.2s ease-in-out;
 }
 
+.all-content {
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  min-height: 100%;
+}
+
 .main-content {
     min-height: 300px;
 }
 
 .site-content {
-    min-height: 60vh;
     padding-top: 1.5rem;
     margin-top: 57px;
     transition: all 0.4s;
 }
 
 .text-dark {
-    color: #2A2A28!important;
+    color: var(--dark-grey)!important;
 }
 
 a.text-dark, a.prev, a.next {
@@ -131,15 +209,19 @@ section.recent-posts {
 }
 
 .section-title h2 {
-    border-bottom: 1px solid rgba(0, 0, 0, .125);
+    border-bottom: var(--secondary-color) 1px solid;
     margin-bottom: 25px;
     font-weight: 700;
     font-size: 1.6rem;
     margin-bottom: 20px;
+    color: var(--dark-grey);
+}
+
+.section-main h2 {
+    border-bottom: var(--primary-color) 1px solid;
 }
 
 .section-title span {
-    border-bottom: 1px solid --var(--light-grey);
     display: inline-block;
     padding-bottom: 10px;
     margin-bottom: -1px;
@@ -168,25 +250,12 @@ i.fa-li {
     margin-bottom: 0rem;
 }
 
-.post {
-    height: 250px;
-}
 
 .align-right {
     display: flex;
     justify-content: flex-end;
     margin-left: auto;
     margin-right: 0;
-}
-
-.card-body {
-    -ms-flex: 1 1 auto;
-    flex: 1 1 auto;
-    padding: 1.25rem;
-    padding-top: 1.25rem;
-    padding-right: 1.25rem;
-    padding-left: 1.25rem;
-    padding-bottom: 0;
 }
 
 .paper-name, .paper-links {
@@ -224,7 +293,7 @@ i.fa-li {
 }
 
 .listfeaturedtag {
-    border: 1px solid rgba(0, 0, 0, .125);
+    border: var(--secondary-color) 1px solid;
     border-radius: .25rem;
     transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
 }
@@ -238,11 +307,6 @@ i.fa-li {
 .maxthumb {
     max-height: 300px;
     overflow: hidden;
-}
-
-.listfeaturedtag .card,
-.card-footer {
-    border: 0;
 }
 
 .listfeaturedtag .thumbnail {
@@ -259,12 +323,20 @@ i.fa-li {
     padding-left: 0;
 }
 
+.listfeaturedtag .card, .card-footer {
+       background-color: unset;
+}
+
 .listfeaturedtag h2.card-title,
 .listrecent h2.card-title {
     font-size: 1.3rem;
     font-weight: 700;
     line-height: 1.25;
 }
+.listfeaturedtag h2.card-title:hover {
+    color: var(--secondary-color);
+}
+
 
 .listfeaturedtag h4.card-text,
 .listrecent h4.card-text {
@@ -273,6 +345,37 @@ i.fa-li {
     line-height: 1.6;
     font-weight: 400;
 }
+
+
+.card-body {
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    padding: 1.25rem;
+    padding-top: 1.25rem;
+    padding-right: 1.25rem;
+    padding-left: 1.25rem;
+    padding-bottom: 0;
+}
+
+.card-footer {
+    padding: 0.5rem 1.5rem;
+}
+
+
+.listfeaturedtag .card,
+.card-footer {
+    border: 0;
+}
+
+
+.card-title a {
+    color: var(--dark-grey);
+}
+
+.card-title a:hover {
+    color: var(--secondary-color);
+}
+
 
 .card-title {
     height: 50px;
@@ -319,6 +422,11 @@ h1.card-text, h2.card-text, h3.card-text, h4.card-text, h5.card-text, h6.card-te
     border-radius: 100%;
 }
 
+
+.post {
+    height: 250px;
+}
+
 .post-top-meta {
     margin-bottom: 2rem;
 }
@@ -342,6 +450,10 @@ h1.card-text, h2.card-text, h3.card-text, h4.card-text, h5.card-text, h6.card-te
     margin-bottom: 5px;
     margin-top: 5px;
     font-size: 0.95rem;
+}
+
+.col-12.col-md-12.col-lg-7.post {
+    padding-left: 0px;
 }
 
 .toc {
@@ -467,14 +579,15 @@ span.post-read-more a:hover {
 
 .footer {
     border-top: 1px solid rgba(0, 0, 0, .05) !important;
-    padding-top: 15px;
-    padding-bottom: 12px;
     font-size: 0.8rem;
     color: var(--light-grey);
-    margin-top: 50px;
-    margin-bottom: 62px;
-    position: relative;
     background: #fff;
+    padding-top: 10px;
+    padding-bottom: 9px;
+}
+
+footer .container {
+    height: 100%;
 }
 
 .link-dark {
@@ -697,8 +810,9 @@ a.smoothscroll {
 }
 
 a.smoothscroll:hover {
-    background: rgba(0, 0, 0, .07);
+    background: var(--secondary-color);
     text-decoration: none;
+    color: white;
 }
 
 .margtop3rem {
@@ -714,8 +828,8 @@ a.smoothscroll:hover {
 }
 
 .btn:hover {
-    color: var(--primary-color);
-    border-color: var(--primary-color);
+    color: var(--secondary-color);
+    border-color: var(--secondary-color);
 }
 
 a.btn, .btn.follow {
@@ -950,6 +1064,28 @@ img {
     margin-right: auto;
 }
 
+
+.blog-header {
+    background-image: url('/assets/images/long.png');
+    min-height: 10rem;
+    flex: 0 0 auto;
+    background-position: center;
+    background-position-x: 1100px;
+    margin-bottom: 2rem;
+
+}
+
+.blog-header .container {
+    min-height: 10rem;
+    max-width: 70%;
+    flex-direction: column;
+    justify-content: center;
+    display: flex;
+    font-family: var(--secondary-font);
+    color: white;
+    font-size: 2rem;
+}
+
 img.emoji {
     display: inline;
 }
@@ -1075,6 +1211,7 @@ iframe {
     .share {
         margin-top: 30px;
     }
+
 }
 
 @media (max-width: 992px) {

@@ -20,22 +20,22 @@
                 <div class="h-100 card-group">
                     <div class="card">
                         <div class="card-body">
-                            <h2 class="card-title">
-                                <a class="text-dark" href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+                            <h5 class="card-title">
+                                <a class="" href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
                                 {% if post.rating %}
                                 <div class="mb-2 mt-2 font-weight-normal">
                                 {% include star_rating_postbox.html %}
                                 </div>
                                 {% endif %}
-                            </h2>
+                            </h5>
                             {% if post.toc and post.beforetoc %}
-                            <h4 class="card-text">{{ post.beforetoc | truncate: 170 }}</h4>
+                             <h4 class="card-text">{{ post.beforetoc | markdownify | truncate:150 }}</h4>
                             {% else %}
-                            <h4 class="card-text">{{ post.excerpt | truncate: 170 }}</h4>
+                            <h4 class="card-text">{{ post.excerpt | strip_html| truncate:150 }}</h4>
 
                             {% endif %}
                         </div>
-                        <div class="card-footer b-0 bg-white mt-auto">
+                        <div class="card-footer b-0 mt-auto">
                             <div class="wrapfooter">
                                 {% if post.author %}
                                 <span class="meta-footer-thumb">
@@ -53,7 +53,7 @@
                                     <time class="post-date" datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date: "%b %-d, %Y" }}</time></span>
                                 {% if post.last_modified_at %}
                                 &nbsp;|&nbsp;<i class="far fa-calendar-plus" aria-hidden="true"></i>
-                                    &nbsp;<time datetime="{{ post.last_modified_at | date_to_xmlschema }}" itemprop="dateModified">{{ post.last_modified_at | date: "%b %-d, %Y" }}</time>
+                                    &nbsp;<time datetime="{{ post.last_modified_at | date_to_xmlschema }}" itemprop="dateModified"> {{ post.last_modified_at | date: "%b %-d, %Y" }}</time>
                                 {% endif %}
                             </div>
                         </div>
