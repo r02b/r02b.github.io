@@ -23,17 +23,10 @@ permalink: /
     <a href="https://research.vmware.com/" target="_blank">VMware Research Group</a> in Palo Alto, mentored by
     <a href="https://research.vmware.com/researchers/israel-cidon" target="_blank">Israel Cidon</a>.
     In the past (2012-2018), I have held several positions at
-        <a href="https://altair-semi.com/" target="_blank">Altair Semiconductor</a> (now Sony),
+        <a href="https://altair-semi.com/" target="_blank">Altair Semiconductor</a> (now a Sony company),
         the latest of which was Computer Vision Researcher.
     <br>
 
-<!--
-    My Computer Science masters' degree, supervised by <a href="https://www.researchgate.net/scientific-contributions/7349961_Yehoshua_Sagiv" target="_blank">
-
-        Yehushoa (Shuky) Sagiv</a>, focused on graph databases
-
-    I received my bachelor degree from HUJI as well, majoring in Mathematics and Computer Science.
--->
  </div>
 </div>
 
