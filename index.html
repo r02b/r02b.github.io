@@ -7,9 +7,9 @@ permalink: /blog
 ---
 <!-- Featured
 ================================================== -->
-<section class="featured-posts">
+<section class="featured-posts section-main">
     <div class="section-title">
-        <h2><span>Featured</span></h2>
+        <h2><span>Featured Posts</span></h2>
     </div>
     <div class="row">
 
@@ -33,7 +33,7 @@ permalink: /blog
 
 <!-- Explore
 ================================================== -->
-<section class="explore">
+<section class="explore section-main">
     <div class="section-title">
         <h2><span>Explore</span></h2>
     </div>
@@ -94,20 +94,20 @@ permalink: /blog
 
 <!-- Posts Index
 ================================================== -->
-<section class="recent-posts">
+<section class="recent-posts section-main">
 
     <div class="section-title">
 
-        <h2><span>All Stories</span></h2>
+        <h2><span>Everything</span></h2>
 
     </div>
 
     <div class="row listrecent">
 
         {% for post in site.posts %}
-        <script>
-            console.log("{{ post.title }}");
-        </script>
+<!--        <script>-->
+<!--            console.log("{{ post.title }}");-->
+<!--        </script>-->
 
         {% include postbox.html %}
 

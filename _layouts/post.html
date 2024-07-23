@@ -3,6 +3,7 @@ layout: default
 disqus: false
 archive: false
 post_class: post-template
+permalink: /posts/
 ---
 
 <!-- Begin Article
@@ -94,7 +95,7 @@ post_class: post-template
                     {% if page.beforetoc %}
                         <em>{{ page.beforetoc | markdownify}}</em>
                     {% endif %}
-                    <div class="toc mt-4 mb-4 lead">
+                    <div class="toc mt-4 mb-4">
                         <h3 class="font-weight-bold summary">Summary</h3>
                         {% include toc.html html=content %}
                     </div>

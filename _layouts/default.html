@@ -4,7 +4,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <link rel="icon" href="{{ site.baseurl }}/assets/images/logo.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ site.baseurl }}/assets/images//apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ site.baseurl }}/assets/images//favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ site.baseurl }}/assets/images//favicon-16x16.png">
 
     {% seo %}
 
@@ -41,18 +43,15 @@ ga('send', 'pageview');
 
     <!-- Begin Menu Navigation
     ================================================== -->
-    {% if page.url == "/" %}
     <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top mediumnavigation nav-down">
-    {% else %}
-    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top mediumnavigation nav-down img-bg">
-    {% endif %}
-        <div class="container pr-0 container-small">
-            {% if page.url == "/" %}
-            <div class="">
-                <a class="navbar-brand" href="{{ site.baseurl }}/">Noga H. Rotman</a>
-            </div>
-            {% endif %}
+<!--    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top mediumnavigation nav-down blog-bg">-->
 
+        <div class="container pr-0 container-small">
+<!--            {% if page.is_post or page.url == "/blog" %}-->
+<!--                <a class="navbar-brand blog-nav" href="{{ site.baseurl }}/">Noga H. Rotman</a>-->
+<!--            {% else %}-->
+                <a class="navbar-brand" href="{{ site.baseurl }}/">Noga H. Rotman</a>
+<!--            {% endif %}-->
 
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMediumish" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -62,11 +61,18 @@ ga('send', 'pageview');
 
             <!-- Begin Menu -->
             <ul class="navbar-nav ml-auto">
-                {% if page.url == "/" %}
-                <li class="nav-item active">
-                     <a class="nav-link" href="{{ site.baseurl }}/"><i class="fa-solid fa-house-chimney"></i></a>
-                </li>
+                {% if page.is_post or page.url == "/blog" or page.url == "/categories" or page.url == "/tags" %}
+                    <li class="empty"></li>
+                {% else %}
+                    {% if page.url == "/" %}
+                        <li class="nav-item active">
+                    {% else %}
+                        <li class="nav-item">
+                    {% endif %}
+                             <a class="nav-link" href="{{ site.baseurl }}/"><i class="fa-solid fa-house-chimney"></i></a>
+                        </li>
                 {% endif %}
+
                 {% if page.url == "/blog" %}
                 <li class="nav-item active">
                 {% else %}
@@ -74,32 +80,37 @@ ga('send', 'pageview');
                 {% endif %}
                     <a class="nav-link" href="{{ site.baseurl }}/blog.html"><i class="fa-solid fa-blog"></i></a>
                 </li>
-                {% if page.url == "/about" %}
-                <li class="nav-item active">
+
+                {% if page.url == "/technical_deets" %}
+                    <li class="nav-item active">
                 {% else %}
-                <li class="nav-item">
+                    <li class="nav-item">
                 {% endif %}
-                    <a class="nav-link" href="{{ site.baseurl }}/about"><i class="fa-solid fa-circle-question"></i></a>
-                </li>
-               {% if page.url == "/" %}
-                <li class="nav-item">
-                    <span class="nav-sep">|</i></span>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="https://scholar.google.com/citations?user=VAgdtpoAAAAJ" target="_blank">
-                        <i class="ai ai-google-scholar-square fab zoom"></i></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="https://twitter.com/NogaRot" target="_blank"><i class="fab fa-twitter-square"></i></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="https://www.linkedin.com/in/noga-h-rotman/" target="_blank"><i class="fab fa-linkedin"></i></a>
-                </li>
+                <a class="nav-link" href="{{ site.baseurl }}/technical_deets"><i class="fa-solid fa-circle-question"></i></a>
+
+                {% if page.is_post or page.url == "/blog" or page.url == "/categories" or page.url == "/tags" or page.url == "/technical_deets" %}
+                    <div class="empty"></div>
+                {% else %}
+                    <li class="nav-sep">
+<!--                    <a class="nav-link">-->
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+<!--                    </a>-->
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://scholar.google.com/citations?user=VAgdtpoAAAAJ" target="_blank">
+                            <i class="ai ai-google-scholar-square fab zoom"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://twitter.com/NogaRot" target="_blank"><i class="fab fa-twitter-square"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://www.linkedin.com/in/noga-h-rotman/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    </li>
                 {% endif %}
 
-                <li class="nav-item">
-                    <span class="nav-sep">|</i></span>
-                </li>
+                    <li class="nav-sep">
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                    </li>
 
                 {% include search-lunr.html %}
 
@@ -118,19 +129,6 @@ ga('send', 'pageview');
     ================================================== -->
     <div class="all-content">
     <div class="site-content">
-            {% if page.url == "/blog" %}
-        <div class="container container-small">
-            <div class="blog-header container container-small">
-                <div class="container">
-                     {{ site.description }}
-                </div>
-<!--                    <p class="lead">-->
-<!--                        {{ site.description }}-->
-<!--                    </p>-->
-            </div>
-        </div>
-     {% endif %}
-
         <div class="container container-small">
 
 
@@ -143,17 +141,22 @@ ga('send', 'pageview');
                             {{content}}
                         </div>
                         <div class="col-md-3 align-right">
-                            <div class="section-text" id="updates">
+                            <div class="section-container section-side" id="updates">
                                 <div class="section-title">
                                     <h2><span>Updates</span></h2>
                                 </div>
-                            <ul><!-- Yes this is hard coded and very ugly, hopefully I'll automate at some point -->
-                                <li>Aug 18, 2022: Yet another new <a href="{{ site.baseurl }}/seaborn_palettes">blog post</a></li>
-                                <li>Jul 27, 2022: new <a href="{{ site.baseurl }}/bars_1">blog post</a></li>
-                                <li>Jul 22, 2022: <a href="{{ site.baseurl }}/dataframe_ordering">first blog post</a></li>
-                            </ul>
+                                <div class="section-text">
+                                <ul><!-- Yes this is hard coded and very ugly, hopefully I'll automate at some point -->
+                                    <li>Oct 2, 2023: New <a href="{{ site.baseutl }}/index#per2023">short paper!</a></li>
+                                    <li>Aug 18, 2022: Yet another new <a href="{{ site.baseurl }}/seaborn_palettes">blog post</a></li>
+                                    <li>Jul 27, 2022: new <a href="{{ site.baseurl }}/bars_1">blog post</a></li>
+                                    <li>Jul 22, 2022: <a href="{{ site.baseurl }}/dataframe_ordering">first blog post</a></li>
+                                </ul>
+                                </div>
+                            </div>
+                            <div id="placeholder-side">
+                            </div>
                         </div>
-                    </div>
                 </div>
                 {% else %}
 
@@ -162,58 +165,18 @@ ga('send', 'pageview');
                 {% endif %}
             </div>
 
-            {% if site.mailchimp-list %}
-            <!-- Bottom Alert Bar
-            ================================================== -->
-            <div class="alertbar">
-                <div class="container text-center">
-                    <span><img src="{{ site.baseurl }}/{{ site.logo }}" alt="{{site.title}}"> &nbsp; Never miss a <b>story</b> from us, subscribe to our newsletter</span>
-                    <form action="{{site.mailchimp-list}}" method="post" name="mc-embedded-subscribe-form" class="wj-contact-form validate" target="_blank" novalidate>
-                        <div class="mc-field-group">
-                        <input type="email" placeholder="Email" name="EMAIL" class="required email" id="mce-EMAIL" autocomplete="on" required>
-                        <input type="submit" value="Subscribe" name="subscribe" class="heart">
-                        </div>
-                    </form>
-                </div>
-            </div>
-            {% endif %}
-
             </div>
 
-            <!--&lt;!&ndash; Categories Jumbotron-->
-            <!--================================================== &ndash;&gt;-->
-            <!--<div class="jumbotron fortags">-->
-            <!--	<div class="d-md-flex h-100">-->
-            <!--		<div class="col-md-4 transpdark align-self-center text-center h-100">-->
-            <!--            <div class="d-md-flex align-items-center justify-content-center h-100">-->
-            <!--                <h2 class="d-md-block align-self-center py-1 font-weight-light">Explore <span class="d-none d-md-inline">→</span></h2>-->
-            <!--            </div>-->
-            <!--		</div>-->
-            <!--		<div class="col-md-8 p-5 align-self-center text-center">-->
-            <!--            {% assign categories_list = site.categories %}-->
-            <!--            {% if categories_list.first[0] == null %}-->
-            <!--                {% for category in categories_list %}-->
-            <!--                    <a class="mt-1 mb-1" href="{{site.baseurl}}/categories#{{ category | url_escape | strip | replace: ' ', '-' }}">{{ category | camelcase }} ({{ site.tags[category].size }})</a>-->
-            <!--                {% endfor %}-->
-            <!--            {% else %}-->
-            <!--                {% for category in categories_list %}-->
-            <!--                    <a class="mt-1 mb-1" href="{{site.baseurl}}/categories#{{ category[0] | url_escape | strip | replace: ' ', '-' }}">{{ category[0] | camelcase }} ({{ category[1].size }})</a>-->
-            <!--                {% endfor %}-->
-            <!--            {% endif %}-->
-            <!--            {% assign categories_list = nil %}-->
-            <!--		</div>-->
-            <!--	</div>-->
-            <!--</div>-->
+    </div>
 
-
-    </div> <!-- /.site-content -->
+    <!-- /.site-content -->
 
     <!-- Begin Footer
     ================================================== -->
-    {% if page.url == "/" %}
-    <footer class="footer">
+    {% if page.url == "/blog" or page.is_post %}
+    <footer class="footer blog-bg">
     {% else %}
-    <footer class="footer img-bg">
+    <footer class="footer">
     {% endif %}
         <div class="container text-center">
                     Copyright © {{ site.time | date: "%Y" }} Noga H. Rotman
@@ -241,6 +204,6 @@ ga('send', 'pageview');
     <!--{% if page.layout == 'post' %}-->
     <!--<script id="dsq-count-scr" src="//{{site.disqus}}.disqus.com/count.js"></script>-->
     <!--{% endif %}-->
-</div>
+    </div>
 </body>
 </html>
