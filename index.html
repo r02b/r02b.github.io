@@ -26,11 +26,6 @@ permalink: /blog
     </div>
 </section>
 
-<script type="module">
-    import countapi from "{{ site.baseurl }}/assets/js/countapi-js.js";
-    countapi.visits('{{ page.url | replace:'/','' }}');
-</script>
-
 <!-- Explore
 ================================================== -->
 <section class="explore section-main">
@@ -116,14 +111,3 @@ permalink: /blog
     </div>
 
 </section>
-
-<!-- Not working on GitHub - need to write a workaround
--->
-<!--&lt;!&ndash; Pagination-->
-<!--================================================== &ndash;&gt;-->
-<!--<div class="bottompagination">-->
-<!--<div class="pointerup"><i class="fa fa-caret-up"></i></div>-->
-<!--<span class="navigation" role="navigation">-->
-<!--    {% include pagination.html %}-->
-<!--</span>-->
-<!--</div>-->

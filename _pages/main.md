@@ -34,83 +34,92 @@ permalink: /
      <div class="section-title">
         <h2><span>Publications</span></h2>
     </div>
-<div class="section-text">
-    <ul class="fa-ul">
-    <li><i class="fa-li fa-solid fa-book"></i>
-            <span class="paper-name" id="per2023">
-                Tackling Deployability Challenges in ML-Powered Networks
-            </span>
-            <br>Noga H. Rotman.
-            <a href="https://dl.acm.org/newsletter/sigmetrics" target="_blank">ACM SIGMETRICS PER 2023</a>. 
-            <br>
-            <span class="paper-links">
-                <a href="https://dl.acm.org/doi/10.1145/3626570.3626605" target="_blank">[Short Paper]</a>,
-                <a href="assets/slides/OSAP_Hotnets.pdf" target="_blank">[Slides]</a>
-            </span>
-            <br>
-            Based on an invited talk at the <a href="https://measure-selfdn23.cs.ucsb.edu/" target="_blank">ACM SIGMETRICS Workshop on Measurements for Self-Driving Networks</a>.
-        </li>
-        <li><i class="fa-li fa-solid fa-book"></i>
-            <span class="paper-name">
-                Online Safety Assurance for Learning-Augmented Systems
-            </span>
-            <br>Noga H. Rotman, Michael Schapira, Aviv Tamar.
-            <a href="http://conferences.sigcomm.org/hotnets/2020/" target="_blank">HotNets 2020</a>. 
-            <br>
-            <span class="paper-links">
-                <a href="https://dl.acm.org/doi/10.1145/3422604.3425940" target="_blank">[Short Paper]</a>,
-                <a href="assets/slides/OSAP_Hotnets.pdf" target="_blank">[Slides]</a>,
-                <a href="https://youtu.be/a3JO5p10MHE?t=5830" target="_blank">[Video]</a>
-            </span>
-            <br>Also see <a href="https://arxiv.org/pdf/2010.03625.pdf" target="_blank">[Short Paper]</a> from
-            <a href="https://sites.google.com/view/deep-rl-workshop-neurips2020/" target="_blank">
-                    Deep Reinforcement Learning Workshop</a> and
-                    <a href="https://sites.google.com/view/neurips2020rwrl" target="_blank">
-                        Challenges of Real-World RL Workshop</a>,
-                    <a href="https://neurips.cc/" target="_blank">NeurIPS 2020</a>.
-        </li>
-        <li><i class="fa-li fa-solid fa-book"></i>
-            <span class="paper-name">
-                A Deep Reinforcement Learning Perspective on Internet Congestion Control
-            </span>
-            <br>Nathan Jay, Noga H. Rotman, P. Brighten Godfrey, Michael Schapira, Aviv Tamar.
-            <a href="https://icml.cc/" target="_blank">ICML 2019</a>.
-            <br>
-            <span class="paper-links">
-                <a href="https://arxiv.org/abs/1810.03259v3" target="_blank">[Paper]</a>,
-                <a href="assets/slides/Aurora_AIWeek.pdf" target="_blank">[Slides]</a>,
-                <a href="https://youtu.be/8bzHuplGI-M" target="_blank">[Video]</a>
-            </span>
-            <br>Also see <a href="https://arxiv.org/abs/1810.03259" target="_blank">[Short Paper]</a>
-            from <a href="https://sites.google.com/view/deep-rl-workshop-nips-2018/home" target="_blank">Deep Reinforcement Learning Workshop</a>, <a href="https://neurips.cc/" target="_blank">NeurIPS 2018</a>.          
-        </li>
-    </ul>
+    <div class="section-text">
+        <ul class="fa-ul">
+            <li><i class="fa-li fa-solid fa-book"></i>
+                <span class="paper-name">
+                    Online Safety Assurance for Learning-Augmented Systems
+                </span>
+                <br>Noga H. Rotman, Michael Schapira, Aviv Tamar.
+                <a href="http://conferences.sigcomm.org/hotnets/2020/" target="_blank">HotNets 2020</a>. 
+                <br>
+                <span class="paper-links">
+                    <a href="https://dl.acm.org/doi/10.1145/3422604.3425940" target="_blank">[Short Paper]</a>,
+                    <a href="assets/slides/OSAP_Hotnets.pdf" target="_blank">[Slides]</a>,
+                    <a href="https://youtu.be/a3JO5p10MHE?t=5830" target="_blank">[Video]</a>
+                </span>
+                <br>Also see <a href="https://arxiv.org/pdf/2010.03625.pdf" target="_blank">[Short Paper]</a> from
+                <a href="https://sites.google.com/view/deep-rl-workshop-neurips2020/" target="_blank">
+                        Deep Reinforcement Learning Workshop</a> and
+                        <a href="https://sites.google.com/view/neurips2020rwrl" target="_blank">
+                            Challenges of Real-World RL Workshop</a>,
+                        <a href="https://neurips.cc/" target="_blank">NeurIPS 2020</a>.
+            </li>
+            <li><i class="fa-li fa-solid fa-book"></i>
+                <span class="paper-name">
+                    A Deep Reinforcement Learning Perspective on Internet Congestion Control
+                </span>
+                <br>Nathan Jay, Noga H. Rotman, P. Brighten Godfrey, Michael Schapira, Aviv Tamar.
+                <a href="https://icml.cc/" target="_blank">ICML 2019</a>.
+                <br>
+                <span class="paper-links">
+                    <a href="https://arxiv.org/abs/1810.03259v3" target="_blank">[Paper]</a>,
+                    <a href="assets/slides/Aurora_AIWeek.pdf" target="_blank">[Slides]</a>,
+                    <a href="https://youtu.be/8bzHuplGI-M" target="_blank">[Video]</a>
+                </span>
+                <br>Also see <a href="https://arxiv.org/abs/1810.03259" target="_blank">[Short Paper]</a>
+                from <a href="https://sites.google.com/view/deep-rl-workshop-nips-2018/home" target="_blank">Deep Reinforcement Learning Workshop</a>, <a href="https://neurips.cc/" target="_blank">NeurIPS 2018</a>.          
+            </li>
+        </ul>
+    </div>
 </div>
+<div id="manuscripts" class="section-container section-main">
+     <div class="section-title">
+        <h2><span>Manuscripts</span></h2>
+    </div>
+    <div class="section-text">
+        <ul class="fa-ul">
+            <li><i class="fa-li fas fa-file-pen"> </i>
+                <span class="paper-name">CloudCast: Characterizing Public Clouds Connectivity</span> 
+                <br>Noga H. Rotman, Yaniv Ben-Itzhak, Aran Bergman, Israel Cidon, Igor Golikov, Alex Markuze, Eyal Zohar.
+                2022.
+                <br>
+                <span class="paper-links">
+                    <a href="https://arxiv.org/pdf/2201.06989.pdf" target="_blank">[Paper]</a>
+                </span>
+             </li>
+             <li><i class="fa-li fas fa-file-pen"> </i>
+                <span class="paper-name">Pied Piper: Rethinking Internet Data Delivery</span>
+                <br>Aran Bergman, Israel Cidon, Isaac Keslassy, Noga H. Rotman, Michael Schapira, Alex Markuze, Eyal Zohar. 2018.
+                <br>
+                <span class="paper-links">
+                    <a href="https://arxiv.org/pdf/1812.05582.pdf" target="_blank">[Paper]</a>
+                </span>
+             </li>
+        </ul>
+    </div>
 </div>
 
-<div id="preprints" class="section-container section-main">
+<div id="other" class="section-container section-main">
      <div class="section-title">
-        <h2><span>Preprints</span></h2>
+        <h2><span>Other</span></h2>
     </div>
-<div class="section-text">
-    <ul class="fa-ul">
-	    <li><i class="fa-li fas fa-file-pen"> </i>
-	        <span class="paper-name">CloudCast: Characterizing Public Clouds Connectivity</span> 
-	        <br>Noga H. Rotman, Yaniv Ben-Itzhak, Aran Bergman, Israel Cidon, Igor Golikov, Alex Markuze, Eyal Zohar.
-	        2022.
-	        <br>
-	        <span class="paper-links">
-	            <a href="https://arxiv.org/pdf/2201.06989.pdf" target="_blank">[Paper]</a>
-	        </span>
-	     </li>
-	     <li><i class="fa-li fas fa-file-pen"> </i>
-	        <span class="paper-name">Pied Piper: Rethinking Internet Data Delivery</span>
-	        <br>Aran Bergman, Israel Cidon, Isaac Keslassy, Noga H. Rotman, Michael Schapira, Alex Markuze, Eyal Zohar. 2018.
-	        <br>
-	        <span class="paper-links">
-	            <a href="https://arxiv.org/pdf/1812.05582.pdf" target="_blank">[Paper]</a>
-	        </span>
-	     </li>
-    </ul>
-</div>
+    <div class="section-text">
+        <ul class="fa-ul">
+         <li><i class="fa-li fa-solid fa-person-chalkboard"></i>
+                    <span class="paper-name" id="per2023">
+                        Tackling Deployability Challenges in ML-Powered Networks
+                    </span>
+                    <br>Noga H. Rotman.
+                    <a href="https://dl.acm.org/newsletter/sigmetrics" target="_blank">ACM SIGMETRICS PER 2023</a>. 
+                    <br>
+                    <span class="paper-links">
+                        <a href="https://dl.acm.org/doi/10.1145/3626570.3626605" target="_blank">[Short Paper]</a>,
+                        <a href="assets/slides/OSAP_Hotnets.pdf" target="_blank">[Slides]</a>
+                    </span>
+                    <br>
+                    Based on an invited talk at the <a href="https://measure-selfdn23.cs.ucsb.edu/" target="_blank">ACM SIGMETRICS Workshop on Measurements for Self-Driving Networks</a>.
+                </li>
+        </ul>
+    </div>
 </div>
