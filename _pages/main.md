@@ -79,7 +79,7 @@ permalink: /
     </div>
     <div class="section-text">
         <ul class="fa-ul">
-            <li><i class="fa-li fas fa-file-pen"> </i>
+            <li><i class="fa-li fas fa-pen-to-square"> </i>
                 <span class="paper-name">CloudCast: Characterizing Public Clouds Connectivity</span> 
                 <br>Noga H. Rotman, Yaniv Ben-Itzhak, Aran Bergman, Israel Cidon, Igor Golikov, Alex Markuze, Eyal Zohar.
                 2022.
@@ -88,7 +88,7 @@ permalink: /
                     <a href="https://arxiv.org/pdf/2201.06989.pdf" target="_blank">[Paper]</a>
                 </span>
              </li>
-             <li><i class="fa-li fas fa-file-pen"> </i>
+             <li><i class="fa-li fas fa-pen-to-square"> </i>
                 <span class="paper-name">Pied Piper: Rethinking Internet Data Delivery</span>
                 <br>Aran Bergman, Israel Cidon, Isaac Keslassy, Noga H. Rotman, Michael Schapira, Alex Markuze, Eyal Zohar. 2018.
                 <br>

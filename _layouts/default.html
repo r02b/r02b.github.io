@@ -38,24 +38,22 @@ ga('send', 'pageview');
 	<!-- defer loading of fonts -->
 	<noscript id="deferred-styles">
 		<link href="https://fonts.googleapis.com/css?family=Righteous%7CMerriweather:300,300i,400,400i,700,700i" rel="stylesheet">
-<!--        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/fontawesome.css">-->
-<!--        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/brands.css">-->
-<!--		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">-->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
 
 	</noscript>
 
     <!-- Begin Menu Navigation
     ================================================== -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top mediumnavigation nav-down">
-<!--    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top mediumnavigation nav-down blog-bg">-->
+
+    {% if page.is_post or page.url == "/blog" or page.url == "/categories" or page.url == "/tags" %}
+        <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top mediumnavigation nav-down blog-bg">
+        {% else %}
+        <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top mediumnavigation nav-down">
+    {% endif %}
 
         <div class="container pr-0 container-small">
-<!--            {% if page.is_post or page.url == "/blog" %}-->
-<!--                <a class="navbar-brand blog-nav" href="{{ site.baseurl }}/">Noga H. Rotman</a>-->
-<!--            {% else %}-->
-                <a class="navbar-brand" href="{{ site.baseurl }}/">Noga H. Rotman</a>
-<!--            {% endif %}-->
+                <a class="navbar-brand">Noga H. Rotman</a>
+
 
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMediumish" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -65,17 +63,15 @@ ga('send', 'pageview');
 
             <!-- Begin Menu -->
             <ul class="navbar-nav ml-auto">
-                {% if page.is_post or page.url == "/blog" or page.url == "/categories" or page.url == "/tags" %}
-                    <li class="empty"></li>
+                {% if page.url == "/" %}
+                    <li class="nav-item active">
+                         <a class="nav-link" href="{{ site.baseurl }}/#hi"><i class="fa-solid fa-house-chimney"></i></a>
                 {% else %}
-                    {% if page.url == "/" %}
-                        <li class="nav-item active">
-                    {% else %}
-                        <li class="nav-item">
-                    {% endif %}
-                             <a class="nav-link" href="{{ site.baseurl }}/"><i class="fa-solid fa-house-chimney"></i></a>
-                        </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="{{ site.baseurl }}/">
+                        <i class="fa-solid fa-house-chimney"></i></a>
                 {% endif %}
+                </li>
 
                 {% if page.url == "/blog" %}
                 <li class="nav-item active">
@@ -92,9 +88,9 @@ ga('send', 'pageview');
                 {% endif %}
                 <a class="nav-link" href="{{ site.baseurl }}/technical_deets"><i class="fa-solid fa-circle-question"></i></a>
 
-                {% if page.is_post or page.url == "/blog" or page.url == "/categories" or page.url == "/tags" or page.url == "/technical_deets" %}
-                    <div class="empty"></div>
-                {% else %}
+<!--                {% if page.is_post or page.url == "/blog" or page.url == "/categories" or page.url == "/tags" or page.url == "/technical_deets" %}-->
+<!--                    <div class="empty"></div>-->
+<!--                {% else %}-->
                     <li class="nav-sep">
 <!--                    <a class="nav-link">-->
                         <i class="fa-solid fa-ellipsis-vertical"></i>
@@ -110,13 +106,15 @@ ga('send', 'pageview');
                     <li class="nav-item">
                         <a class="nav-link" href="https://www.linkedin.com/in/noga-h-rotman/" target="_blank"><i class="fab fa-linkedin"></i></a>
                     </li>
-                {% endif %}
+<!--                {% endif %}-->
+                {% if page.is_post or page.url == "/blog" or page.url == "/categories" or page.url == "/tags" %}
 
                     <li class="nav-sep">
                         <i class="fa-solid fa-ellipsis-vertical"></i>
                     </li>
 
-                {% include search-lunr.html %}
+                    {% include search-lunr.html %}
+                {% endif %}
 
             </ul>
 
@@ -132,45 +130,44 @@ ga('send', 'pageview');
     <!-- Site Title
     ================================================== -->
     <div class="all-content">
-    <div class="site-content">
-        <div class="container container-small">
+        <div class="site-content">
+            <div class="container container-small">
 
-
-            <!-- Content
-            ================================================== -->
-            <div class="main-content">
-                {% if page.url == "/" %}
-                    <div class="row">
-                        <div class="col-md-9">
-                            {{content}}
-                        </div>
-                        <div class="col-md-3 align-right">
-                            <div class="section-container section-side" id="updates">
-                                <div class="section-title">
-                                    <h2><span>Updates</span></h2>
+                <!-- Content
+                ================================================== -->
+                <div class="main-content">
+                    {% if page.url == "/" %}
+                        <div class="row">
+                            <div class="col-md-9">
+                                {{content}}
+                            </div>
+                            <div class="col-md-3" id="side-panel">
+                                <div class="section-container section-side" id="updates">
+                                    <div class="section-title">
+                                        <h2><span>Updates</span></h2>
+                                    </div>
+                                    <div class="section-text">
+                                        <ul><!-- Yes this is hard coded and very ugly, hopefully I'll automate at some point -->
+                                            <li>Oct 2, 2023: New <a href="{{ site.baseutl }}/index#per2023">short paper!</a></li>
+        <!--                                    <li>Aug 18, 2022: Yet another new <a href="{{ site.baseurl }}/seaborn_palettes">blog post</a></li>-->
+        <!--                                    <li>Jul 27, 2022: new <a href="{{ site.baseurl }}/bars_1">blog post</a></li>-->
+        <!--                                    <li>Jul 22, 2022: <a href="{{ site.baseurl }}/dataframe_ordering">first blog post</a></li>-->
+                                        </ul>
+                                    </div>
                                 </div>
-                                <div class="section-text">
-                                <ul><!-- Yes this is hard coded and very ugly, hopefully I'll automate at some point -->
-                                    <li>Oct 2, 2023: New <a href="{{ site.baseutl }}/index#per2023">short paper!</a></li>
-                                    <li>Aug 18, 2022: Yet another new <a href="{{ site.baseurl }}/seaborn_palettes">blog post</a></li>
-                                    <li>Jul 27, 2022: new <a href="{{ site.baseurl }}/bars_1">blog post</a></li>
-                                    <li>Jul 22, 2022: <a href="{{ site.baseurl }}/dataframe_ordering">first blog post</a></li>
-                                </ul>
+
+                                <div id="placeholder-side">
                                 </div>
                             </div>
-                            <div id="placeholder-side">
-                            </div>
                         </div>
+                    {% else %}
+
+                        {{ content }}
+
+                    {% endif %}
                 </div>
-                {% else %}
-
-                    {{ content }}
-
-                {% endif %}
             </div>
-
-            </div>
-
+        </div>
     </div>
 
     <!-- /.site-content -->
@@ -205,9 +202,5 @@ ga('send', 'pageview');
 
     <script src="{{ site.baseurl }}/assets/js/ie10-viewport-bug-workaround.js"></script>
 
-    <!--{% if page.layout == 'post' %}-->
-    <!--<script id="dsq-count-scr" src="//{{site.disqus}}.disqus.com/count.js"></script>-->
-    <!--{% endif %}-->
-    </div>
 </body>
 </html>
