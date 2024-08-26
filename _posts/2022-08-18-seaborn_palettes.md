@@ -1,8 +1,8 @@
 ---
 layout: post
 title:  "Seaborn Color Palettes and How to Use Them"
-categories: [ data science, visualization ]
-tags: [ seaborn ]
+categories: [ how-to ]
+tags: [ seaborn, visualization ]
 image: "assets/images/crayon-2162075.jpg"
 description: "Using Seaborn color palettes - a comprehensive list, usage examples and customization, plus a note regarding colorblind friendly palettes." 
 featured: true
