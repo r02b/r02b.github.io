@@ -192,7 +192,7 @@ button.close:hover {
 }
 
 .site-content {
-    padding-top: 96px;
+    padding-top: 70px;
     /*margin-top: 57px;*/
     transition: all 0.4s;
 }
@@ -1346,7 +1346,7 @@ iframe {
 
 }
 
-@media (max-width: 992px) {
+@media (max-width: 991px) {
     #side-panel {
         display: none;
     }
@@ -1362,6 +1362,10 @@ iframe {
     .nav-link, .nav-sep {
         padding: 0.5rem 0.8rem;
         /*font-size: 1.2rem;*/
+    }
+
+    .site-content {
+        margin-top: 57px;
     }
 
 }

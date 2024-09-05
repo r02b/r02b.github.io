@@ -7,21 +7,21 @@ permalink: /
 ---
 <div id="hi" class="section-container section-main">
     <div class="section-text">
-    Hi! I am Noga, a computer science PhD candidate at the <a href="http://www.cs.huji.ac.il/" target="_blank">Hebrew University of Jerusalem</a>, advised by <a href="https://www.michaelschapira.com/" target="_blank">Prof. Michael Schapira</a>.
-    <br><br>
+    Hi! I am Noga, a Postdoc at the <a href="https://ece.technion.ac.il/" target="_blank">Technion</a>, advised by <a href="https://marksilberstein.com/" target="_blank">Prof. Mark Silberstein</a>.
+    I did my PhD at the <a href="http://www.cs.huji.ac.il/" target="_blank">Hebrew University of Jerusalem</a>, under the supervising of <a href="https://www.michaelschapira.com/" target="_blank">Prof. Michael Schapira</a>.    <br><br>
     My research interests include, but are hardly limited to:
             <ul class="">
                 <li>Networking, particularly internet protocols</li>
-                <li>Systems</li>
-                <li>Machine learning</li>
+                <li>Systems and Security</li>
+                <li>Machine Learning</li>
                 <li>Data and exciting datasets</li>
             </ul>
     <br>
-    My research is multidisciplinary, and focuses on solving Networking problems using ML in a safe, deployable manner.
+    I love doing multidisciplinary research, and collaborating across different fields. In my PhD thesis, titled "Safe Deployment of Deep Learning Solutions for Rate Control Problems", I focused on solving Networking problems using ML in a safe, deployable manner.
     <br><br>
-    I have been fortunate enough to intern twice (summer/fall 2018 and 2019) at
+    I interned twice (summer/fall 2018 and 2019) at
     <a href="https://research.vmware.com/" target="_blank">VMware Research Group</a> in Palo Alto, mentored by
-    <a href="https://research.vmware.com/researchers/israel-cidon" target="_blank">Israel Cidon</a>.
+    <a href="https://tech.cornell.edu/people/israel-cidon/" target="_blank">Israel Cidon</a>.
     In the past (2012-2018), I have held several positions at
         <a href="https://altair-semi.com/" target="_blank">Altair Semiconductor</a> (now a Sony company),
         the latest of which was Computer Vision Researcher.
