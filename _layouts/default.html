@@ -126,50 +126,16 @@ ga('send', 'pageview');
     <!-- End Navigation
     ================================================== -->
 
-    <!-- Site Title
-    ================================================== -->
     <div class="all-content">
-        <div class="site-content">
-            <div class="container container-small">
+        <div class="container container-small">
 
-                <!-- Content
-                ================================================== -->
-                <div class="main-content">
-                    {% if page.url == "/" %}
-                        <div class="row">
-                            <div class="col-md-9">
-                                {{content}}
-                            </div>
-                            <div class="col-md-3" id="side-panel">
-                                <div class="section-container section-side" id="updates">
-                                    <div class="section-title">
-                                        <h2><span>Updates</span></h2>
-                                    </div>
-                                    <div class="section-text">
-                                        <ul><!-- Yes this is hard coded and very ugly, hopefully I'll automate at some point -->
-                                            <li>Oct 2, 2023: New <a href="{{ site.baseutl }}/index#per2023">short paper!</a></li>
-        <!--                                    <li>Aug 18, 2022: Yet another new <a href="{{ site.baseurl }}/seaborn_palettes">blog post</a></li>-->
-        <!--                                    <li>Jul 27, 2022: new <a href="{{ site.baseurl }}/bars_1">blog post</a></li>-->
-        <!--                                    <li>Jul 22, 2022: <a href="{{ site.baseurl }}/dataframe_ordering">first blog post</a></li>-->
-                                        </ul>
-                                    </div>
-                                </div>
-
-                                <div id="placeholder-side">
-                                </div>
-                            </div>
-                        </div>
-                    {% else %}
-
-                        {{ content }}
-
-                    {% endif %}
-                </div>
+            <!-- Content
+            ================================================== -->
+            <div class="main-content">
+                    {{ content }}
             </div>
         </div>
     </div>
-
-    <!-- /.site-content -->
 
     <!-- Begin Footer
     ================================================== -->
