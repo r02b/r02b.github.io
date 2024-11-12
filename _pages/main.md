@@ -39,7 +39,7 @@ permalink: /
     I have always believed in the power of a supportive and collaborative community.
     At the Hebrew University, I founded a special seminar for graduate students ("Off the Record"), which was so well-received that it became an official mandatory course, offering students an opportunity to engage in a safe environment. 
     In 2022, I co-founded “Baot Research”, the research branch of a popular Israeli all-female tech group.
-    I also served as a mentor throughout the years via different organizations, such as <a href="https://www.linkedin.com/company/baot-il/" traget="_blank">Baot</a> and <a href="https://queenb.org.il/en" target="_blank">Queen B</a>.
+    I also served as a mentor throughout the years via different organizations, such as <a href="https://www.linkedin.com/company/baot-il/" target="_blank">Baot</a> and <a href="https://queenb.org.il/en" target="_blank">Queen B</a>.
     <br><br>
     I can be reached at noga.rotman at mail huj ac il.
 </div>
