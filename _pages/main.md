@@ -10,10 +10,10 @@ permalink: /
         <img src="assets/images/profile.jpg" alt="Hi that's me!"/>
     </div>
     <div id="hi" class="section-text col-md-9">
-            Hi! I am Noga, a Postdoc at the <a href="https://ece.technion.ac.il/" target="_blank">Technion</a>, working with <a href="https://marksilberstein.com/" target="_blank">Prof. Mark Silberstein</a>.
-            I am deeply honored to have been named an Andrew and Erna Finci Viterbi Postdoctoral Fellow for the year 2024/5.
+        Hi! I am Noga, a Postdoc at the <a href="https://www.ucl.ac.uk/engineering/computer-science" target="_blank">Computer Science Department at University College London</a>, hosted by <a href="https://www.bbasat.com/" target="_blank">Prof. Ran Ben Basat</a>.
+        My position is supported by a prestigious Schmidt Sciences Postdoctoral Award.
             <br><br>
-            I am passionate about multidisciplinary research, and collaborating across different fields.
+            I am passionate about multidisciplinary research and collaborating across different fields.
             My research interests include, but are hardly limited to:
                     <ul class="">
                         <li>Networking, particularly internet protocols</li>
@@ -26,20 +26,22 @@ permalink: /
 
 <div class="section-container section-text">
 <br>
-    I did my PhD at the <a href="http://www.cs.huji.ac.il/" target="_blank">Hebrew University of Jerusalem</a>, under the supervision of <a href="https://www.michaelschapira.com/" target="_blank">Prof. Michael Schapira</a>.    
-    In my PhD thesis, titled "Safe Deployment of Deep Learning Solutions for Rate Control Problems", I focused on solving Networking problems using ML in a safe, deployable manner.
+    Before joining UCL, I was a Postdoctoral Researcher at the <a href="https://ece.technion.ac.il/" target="_blank">Technion</a>, working with <a href="https://marksilberstein.com/" target="_blank">Prof. Mark Silberstein</a>, 
+    and was named an Andrew and Erna Finci Viterbi Postdoctoral Fellow for the year 2024/5.
+    I completed my PhD at the <a href="http://www.cs.huji.ac.il/" target="_blank">Hebrew University of Jerusalem</a> under the supervision of <a href="https://www.michaelschapira.com/" target="_blank">Prof. Michael Schapira</a>.    
+    In my PhD thesis, titled <i>Safe Deployment of Deep Learning Solutions for Rate Control Problems</i>, I focused on solving Networking problems using ML in a safe and deployable manner.
     <br><br>
     During my graduate studies, I interned twice (summer/fall 2018 and 2019) at
     <a href="https://research.vmware.com/" target="_blank">VMware Research Group</a> in Palo Alto, mentored by
     <a href="https://tech.cornell.edu/people/israel-cidon/" target="_blank">Israel Cidon</a>.
-    In the past (2012-2018), I have held several positions at
-        <a href="https://altair-semi.com/" target="_blank">Altair Semiconductor</a> (now a Sony company),
+    Earlier in my career (2012-2018), I held several positions at
+        <a href="https://altair-semi.com/" target="_blank">Altair Semiconductor</a>,
     the latest of which was Computer Vision Researcher.
     <br><br>
     I have always believed in the power of a supportive and collaborative community.
-    At the Hebrew University, I founded a special seminar for graduate students ("Off the Record"), which was so well-received that it became an official mandatory course, offering students an opportunity to engage in a safe environment. 
-    In 2022, I co-founded “Baot Research”, the research branch of a popular Israeli all-female tech group.
-    I also served as a mentor throughout the years via different organizations, such as <a href="https://www.linkedin.com/company/baot-il/" target="_blank">Baot</a> and <a href="https://queenb.org.il/en" target="_blank">Queen B</a>.
+    At the Hebrew University, I founded a graduate seminar called <i>Off the Record</i>, which was so well-received that it became an official mandatory course, offering students a safe and open environment to engage in. 
+    In 2023, I co-founded <i>Baot Research</i>, the research branch of a popular Israeli all-female tech group.
+    I also served as a mentor throughout the years via different organizations, such as the aforementioned <a href="https://www.linkedin.com/company/baot-il/" target="_blank">Baot</a> community, as well as <a href="https://queenb.org.il/en" target="_blank">Queen B</a>.
     <br><br>
     I can be reached at noga.rotman at mail huji ac il.
 </div>
